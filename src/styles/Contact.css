@@ -1,0 +1,98 @@
+/* Estilos para el formulario de contacto */
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+  height: auto;
+  background: var(--page-color);
+  padding: 2rem 0rem;
+}
+.contact-form-container {
+  background: var(--card-color);
+  border-radius: var(--rounded-corners);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.contact-form label {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem 1rem;
+  border-radius: var(--rounded-corners);
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #23232a;
+  color: var(--text-color);
+  resize: none;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  max-width: 100%;
+}
+
+.send-btn {
+  background: var(--btn-color);
+  color: var(--hover-text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.send-btn:hover {
+  background: var(--btn-color-hover);
+}
+
+.copy-email-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  background: #23232a;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+}
+.copy-email-container span {
+  color: #fff;
+  font-size: 1.1rem;
+}
+.copy-btn {
+  background: var(--hover-color);
+  color: var(--hover-text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 0.4em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.copy-btn:hover {
+  background: var(--btn-color-hover);
+  color: var(--card-color);
+}

@@ -1,0 +1,109 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar-color);
+  border-radius: var(--rounded-corners);
+  max-width: 80%;
+  margin: 0 auto;;
+  
+}
+
+.navbar-left a {
+  color: var(--text-color);
+  font-size: 150%;
+  text-decoration: none;
+}
+
+.navbar-center ul,
+.navbar-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar-center li,
+.navbar-right li {
+  display: inline-block;
+}
+
+.navbar-center li a,
+.navbar-right li a {
+  display: block;
+  padding: 2.5vh;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 150%;
+  border-radius: var(--rounded-corners);
+  transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-center li a:hover,
+.navbar-right li a:hover {
+  background-color: var(--hover-color);
+  color: var(--hover-text-color);
+  border-radius: var(--rounded-corners);
+}
+
+@font-face {
+  font-family: "MairyExtrabold";
+  src: url("C:\GithubProyects\portfolio_banda_cristian\portfolio\src\Fonts\mairy-cufonfonts\Mairy Book.otf");
+}
+
+.social-logo-navbar {
+  font-size: 150%;
+  width: 100%;
+}
+
+.contact-btn {
+  background: var(--btn-color);
+  color: var(--hover-text-color) !important;
+  border: none;
+  border-radius: var(--rounded-corners);
+  padding: 0.7em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+  display: inline-block;
+  margin-left: 2em;
+  outline: none;
+  /* border: 2px solid var(--hover-color); */
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.contact-btn:hover, .contact-btn:focus {
+  background: var(--btn-color-hover);
+  color: var(--card-color);
+  transform: translateY(-2px) scale(1.04);
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(253,198,105,0.25);
+  border-color: var(--hover-color);
+}
+
+/* Mejora contraste con el fondo oscuro */
+.contact-btn {
+  box-shadow: 0 2px 8px rgba(253,198,105,0.15);
+}
+
+.navbar-center li a.active,
+.navbar-right li a.active,
+.contact-btn.active {
+  background-color: var(--hover-color);
+  color: var(--hover-text-color) !important;
+  border-radius: var(--rounded-corners);
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.10);
+}
+
+
