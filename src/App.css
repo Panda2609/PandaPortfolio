@@ -1,0 +1,71 @@
+h2{
+  font-family: MairyExtrabold;
+}
+
+h3{
+  font-family: MairyExtrabold;
+}
+
+p{
+  font-family: MairyBook;
+}
+
+li {
+  font-family: MairyBook;
+}
+
+@font-face {
+  font-family: "MairyExtrabold";
+  src: url("C:\GithubProyects\portfolio_banda_cristian\portfolio\src\Fonts\mairy-cufonfonts\Mairy Extrabold.otf");
+}
+
+@font-face {
+  font-family: "MairyBook";
+  src: url("C:\GithubProyects\portfolio_banda_cristian\portfolio\src\Fonts\mairy-cufonfonts\Mairy Book.otf");
+}
+
+button{
+  font-family: MairyBook;
+}
+
+a{
+  font-family: MairyBook;
+}
+
+span{
+  font-family: MairyBook;
+}
+
+h5{
+  font-family: MairyBook;
+}
+
+.element {
+  padding: 1.2%;
+}
+
+/* Scroll Snap para navegación por secciones */
+.main-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+/* Aplica scroll snap al body/html para que funcione en toda la pantalla */
+html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.section {
+  scroll-snap-align: start;
+  height: 100vh;
+  scroll-margin-top: 10vh; /* Ajusta este valor a la altura real de tu navbar */
+  padding: 0rem 4rem;
+}
+
