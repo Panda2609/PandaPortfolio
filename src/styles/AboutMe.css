@@ -1,0 +1,209 @@
+/* Modern styles for AboutMe section */
+.aboutme-container {
+  display: flex;
+  background: transparent;
+  min-height: 100vh;
+  padding: 2rem 0rem;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.aboutme-container2{
+  padding: 2rem 0rem;
+}
+
+.aboutme-items {
+  flex: 1 1 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1vw;
+  box-sizing: border-box;
+}
+
+.aboutme-item {
+  display: flex;
+  align-items: center;
+  background: var(--card-color);
+  border-radius: var(--rounded-corners);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 1rem 1rem;
+  gap: 32px;
+  transition: box-shadow 0.2s;
+}
+
+.aboutme-item:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+.aboutme-img {
+  
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--btn-color);
+  background: var(--text-color);
+}
+
+.aboutme-text {
+  flex: 1;
+}
+
+
+.aboutme-text p {
+  margin: 0;
+  color: #4a5568;
+  font-size: var(--font-size-p);
+  line-height: 1.2;
+}
+
+.chat-question {
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.chat-question-formation {
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.chat-answer {
+/* background: #e0e7ef; del chat */
+  background: var(--text-color);
+  border-radius: 12px;
+  padding: 1rem 0.2rem;
+  color: var(--hover-color);
+  font-size: var(--font-size-p);
+  box-shadow: 0 2px 8px rgba(37,99,235,0.04);
+}
+
+.aboutme-graphic-bamboo {
+  flex: 0 0 20%;
+  min-width: 0;
+  max-width: 20%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: transparent;
+  overflow: visible;
+  scale: 1.1;
+  top: 20px;
+}
+
+.bamboo-stem {
+  position: absolute;
+  bottom: 0;
+  width: 22px;
+  height: 92%;
+  background: linear-gradient(180deg, #7ec850 80%, #5e9c36 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(94,156,54,0.10);
+  z-index: 1;
+}
+
+.bamboo-stem.stem1 {
+  left: 30%;
+  height: 92%;
+  rotate: -4deg;
+}
+.bamboo-stem.stem2 {
+  left: 45%;
+  height: 100%;
+}
+.bamboo-stem.stem3 {
+  left: 62%;
+  height: 85%;
+  rotate: 3deg;
+}
+
+.bamboo-node {
+  width: 26px;
+  height: 12px;
+  background: #a3d977;
+  border-radius: 8px;
+  margin: 18px auto;
+  box-shadow: 0 1px 2px rgba(94,156,54,0.08);
+}
+
+.bamboo-leaf {
+  position: absolute;
+  width: 43px;
+  height: 16px;
+  background: linear-gradient(90deg, #4caf50 60%, #a3d977 100%);
+  border-radius: 50% 80% 60% 80%/60% 80% 50% 80%;
+  z-index: 2;
+  opacity: 0.92;
+}
+
+
+/* Hojas para cada palo */
+.bamboo-leaf.stem1-leaf1 { left: 14%; top: 18%; transform: rotate(-52deg); }
+.bamboo-leaf.stem1-leaf2 { left: 14%; top: 38%; transform: rotate(-12deg); }
+.bamboo-leaf.stem1-leaf3 { left: 18%; top: 62%; transform: rotate(35deg); }
+
+.bamboo-leaf.stem2-leaf1 { left: 32%; top: 8%; transform: rotate(18deg); }
+.bamboo-leaf.stem2-leaf2 { left: 32%; top: 32%; transform: rotate(32deg); }
+.bamboo-leaf.stem2-leaf3 { left: 49%; top: 60%; transform: rotate(120deg); }
+
+.bamboo-leaf.stem3-leaf1 { left: 68%; top: 22%; transform: rotate(136deg); }
+.bamboo-leaf.stem3-leaf2 { left: 50%; top: 44%; transform: rotate(37deg); }
+.bamboo-leaf.stem3-leaf3 { left: 66%; top: 68%; transform: rotate(120deg); }
+
+@media (max-width: 900px) {
+  .aboutme-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutme-graphic-bamboo, .aboutme-items {
+    max-width: 100%;
+    flex: none;
+    width: 100%;
+  }
+  .aboutme-graphic-bamboo {
+    height: 220px;
+    margin-bottom: 18px;
+  }
+  .bamboo-stem {
+    width: 14px;
+    border-radius: 8px;
+  }
+  .bamboo-node {
+    width: 16px;
+    height: 7px;
+    border-radius: 4px;
+    margin: 10px auto;
+  }
+  .bamboo-leaf {
+    width: 22px;
+    height: 9px;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutme-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 12px;
+  }
+  .aboutme-img {
+    width: 90px;
+    height: 90px;
+  }
+  .aboutme-items {
+    gap: 18px;
+  }
+  .chat-answer {
+    padding: 10px 12px;
+    font-size: 0.98rem;
+  }
+}
+
