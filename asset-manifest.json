@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/PandaPortfolio/static/css/main.850dfc4a.css",
-    "main.js": "/PandaPortfolio/static/js/main.8543b7ff.js",
+    "main.css": "/PandaPortfolio/static/css/main.97ee7055.css",
+    "main.js": "/PandaPortfolio/static/js/main.a0705209.js",
     "static/js/453.1407b060.chunk.js": "/PandaPortfolio/static/js/453.1407b060.chunk.js",
     "static/media/proyect1.jpg": "/PandaPortfolio/static/media/proyect1.85bed0ee88361bc5e2b7.jpg",
     "static/media/PandaEducation.png": "/PandaPortfolio/static/media/PandaEducation.60573e4ce3c797f331f7.png",
     "static/media/PandaGamer.png": "/PandaPortfolio/static/media/PandaGamer.7a9980248cf273c40a1a.png",
+    "static/media/logotype.png": "/PandaPortfolio/static/media/logotype.8d9ee083570a7d2ee15d.png",
+    "static/media/PandaAboutMe.png": "/PandaPortfolio/static/media/PandaAboutMe.c7dd9878772c61b4764b.png",
+    "static/media/pyme.png": "/PandaPortfolio/static/media/pyme.f924e02ded02c19fee63.png",
+    "static/media/scaper.png": "/PandaPortfolio/static/media/scaper.2239363dfe61d7694557.png",
     "static/media/Mairy Book.otf": "/PandaPortfolio/static/media/Mairy Book.381fc8fabe41397bef21.otf",
     "static/media/CV-Banda_Cristian.pdf": "/PandaPortfolio/static/media/CV-Banda_Cristian.77023bd53c9dd92ecaf8.pdf",
     "static/media/Mairy Extrabold.otf": "/PandaPortfolio/static/media/Mairy Extrabold.c00cab6553ab4c274cfd.otf",
+    "static/media/generador_contrasenias.png": "/PandaPortfolio/static/media/generador_contrasenias.08b3cc5a3e3f74ee0dea.png",
     "static/media/PostgresSQL.svg": "/PandaPortfolio/static/media/PostgresSQL.7bc394e86ea1f692d59a3d484ad156af.svg",
     "static/media/MongoDB.svg": "/PandaPortfolio/static/media/MongoDB.6835c61a518a732eb8318d43dfe8f700.svg",
     "static/media/Mysql.svg": "/PandaPortfolio/static/media/Mysql.18ceecab4211094b4ab4198a91a927fb.svg",
@@ -24,12 +29,12 @@
     "static/media/Git.svg": "/PandaPortfolio/static/media/Git.c08353563539c6459b353f29d8dd7bf2.svg",
     "index.html": "/PandaPortfolio/index.html",
     "static/media/HTML5.svg": "/PandaPortfolio/static/media/HTML5.8664168d5bc90b1a24396f85aadbf623.svg",
-    "main.850dfc4a.css.map": "/PandaPortfolio/static/css/main.850dfc4a.css.map",
-    "main.8543b7ff.js.map": "/PandaPortfolio/static/js/main.8543b7ff.js.map",
+    "main.97ee7055.css.map": "/PandaPortfolio/static/css/main.97ee7055.css.map",
+    "main.a0705209.js.map": "/PandaPortfolio/static/js/main.a0705209.js.map",
     "453.1407b060.chunk.js.map": "/PandaPortfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.850dfc4a.css",
-    "static/js/main.8543b7ff.js"
+    "static/css/main.97ee7055.css",
+    "static/js/main.a0705209.js"
   ]
 }
