@@ -1,7 +1,7 @@
 import { FaGithub } from 'react-icons/fa6';
 import '../styles/Navbar.css'; // Importa tus estilos CSS
 import { FaLinkedin } from 'react-icons/fa';
-
+import logo from '../images/portfolioImages/logotype.png'; // Importa tu logo
 
 export default function Navbar({ activeSection }) {
 
@@ -10,7 +10,10 @@ export default function Navbar({ activeSection }) {
       <div className="navbar-content">
 
         <div className="navbar-left">
-          <a href="#home">Logotipo</a>
+          <a href="#home" className="logo-link">
+            <span>Pan-dev</span>
+            <img src={logo} alt="Logo" className="logo" />
+          </a>
         </div>
 
         <div className="navbar-center">

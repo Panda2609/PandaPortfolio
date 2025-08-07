@@ -11,9 +11,6 @@ import Experience from './components/Experience';
 import Navbar from './components/Navbar';
 import PresentationCard from './components/PresentationCard';
 
-
-
-
 function App() {
   const [activeSection, setActiveSection] = useState("home");
 

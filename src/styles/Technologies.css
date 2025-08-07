@@ -30,6 +30,7 @@
   padding: 0.5em 2em;
   box-shadow: 0 2px 8px rgba(26,35,126,0.04);
   margin-bottom: 0;
+  gap : 0.5em;
 }
 
 .table-header {
@@ -53,8 +54,10 @@
 .table-row .table-cells {
   display: flex;
   flex-wrap: wrap;
-  gap: 2em 2em;
+  gap: 2em;
   align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .table-cell {
@@ -104,6 +107,7 @@
   color: var(--hover-text-color);
   text-align: left;
   font-weight: 500;
+  padding-right: .5em;
 }
 
 @media (max-width: 700px) {

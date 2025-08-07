@@ -4,8 +4,6 @@
   background: transparent;
   min-height: 100vh;
   padding: 2rem 0rem;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .aboutme-container2{
@@ -77,7 +75,7 @@
 /* background: #e0e7ef; del chat */
   background: var(--text-color);
   border-radius: 12px;
-  padding: 1rem 0.2rem;
+  padding: 1rem 1rem;
   color: var(--hover-color);
   font-size: var(--font-size-p);
   box-shadow: 0 2px 8px rgba(37,99,235,0.04);

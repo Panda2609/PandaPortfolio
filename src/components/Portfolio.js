@@ -4,31 +4,34 @@ import { FiExternalLink } from 'react-icons/fi';
 
 //import images
 import proyect1Img from '../images/portfolioImages/proyect1.jpg';
+import pymeIMG from '../images/portfolioImages/pyme.png';
+import generadorContrasenia from '../images/portfolioImages/generador_contrasenias.png';
+import scraperAutos from '../images/portfolioImages/scaper.png';
 
 const projects = [
   {
-    image: proyect1Img,
-    name: 'Proyecto 1',
-    description: 'Descripción breve del proyecto 1.',
+    image: pymeIMG,
+    name: 'Crud Pymes',
+    description: 'Sistema de gestión para pequeñas y medianas empresas con operaciones CRUD completas.',
     technologies: ['React', 'CSS', 'JavaScript'],
-    demoUrl: '#',
-    repoUrl: '#',
+    demoUrl: 'https://panda2609.github.io/my-pyme/',
+    repoUrl: 'https://github.com/Panda2609/my-pyme',
   },
   {
-    image: proyect1Img,
-    name: 'Proyecto 1',
-    description: 'Descripción breve del proyecto 1.',
+    image: generadorContrasenia,
+    name: 'Generador contraseñas',
+    description: 'Herramienta para crear contraseñas seguras y personalizables con diferentes criterios.',
     technologies: ['React', 'CSS', 'JavaScript'],
-    demoUrl: '#',
-    repoUrl: '#',
+    demoUrl: 'https://panda2609.github.io/password-generator/',
+    repoUrl: 'https://github.com/Panda2609/password-generator',
   },
   {
-    image: proyect1Img,
-    name: 'Proyecto 1',
-    description: 'Descripción breve del proyecto 1.',
-    technologies: ['React', 'CSS', 'JavaScript'],
-    demoUrl: '#',
-    repoUrl: '#',
+    image: scraperAutos,
+    name: 'Scraper de autos',
+    description: 'Script de web scraping para extraer información de vehículos desde sitios web.',
+    technologies: ['Python', 'Web Scraping'],
+    demoUrl: '',
+    repoUrl: 'https://github.com/Panda2609/scrapper_python_autos',
   },
   
   
@@ -77,9 +80,15 @@ export default function Portfolio() {
                     })}
                   </div>
                   <div className="portfolio-buttons">
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
-                      <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
-                    </a>
+                    {project.demoUrl ? (
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                        <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
+                      </a>
+                    ) : (
+                      <button className="portfolio-btn portfolio-btn-disabled" disabled>
+                        <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
+                      </button>
+                    )}
                     <span style={{display:'inline-block', width:'2px', height:'28px', background:'#ccc', margin:'0 10px', borderRadius:'2px', alignSelf:'center'}}></span>
                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
                       <FaGithub style={{marginRight:'7px', verticalAlign:'middle'}} />Repositorio
