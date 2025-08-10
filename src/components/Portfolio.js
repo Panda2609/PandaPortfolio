@@ -7,6 +7,7 @@ import proyect1Img from '../images/portfolioImages/proyect1.jpg';
 import pymeIMG from '../images/portfolioImages/pyme.png';
 import generadorContrasenia from '../images/portfolioImages/generador_contrasenias.png';
 import scraperAutos from '../images/portfolioImages/scaper.png';
+import scraperMonitores from '../images/portfolioImages/monitor_scraping.png';
 
 const projects = [
   {
@@ -27,13 +28,21 @@ const projects = [
   },
   {
     image: scraperAutos,
-    name: 'Scraper de autos',
+    name: 'Scraper de autos Mercadolibre',
     description: 'Script de web scraping para extraer información de vehículos desde sitios web.',
-    technologies: ['Python', 'Web Scraping'],
+    technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/scrapper_python_autos',
   },
-  
+  {
+    image: scraperMonitores,
+    name: 'Scraper de monitores Solotodo',
+    // ...existing code...
+    description: 'Script de web scraping en Python que recopila datos detallados de monitores publicados en Solotodo, facilitando el análisis y comparación de precios, modelos y características.',
+    technologies: ['Python'],
+    demoUrl: '',
+    repoUrl: 'https://github.com/Panda2609/solotodo-scraping',
+  },
   
   
   
