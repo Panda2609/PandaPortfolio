@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import '../styles/Portfolio.css';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
@@ -28,7 +29,7 @@ const projects = [
   },
   {
     image: scraperAutos,
-    name: 'Scraper de autos Mercadolibre',
+    name: 'Scraper autos Mercadolibre',
     description: 'Script de web scraping para extraer información de vehículos desde sitios web.',
     technologies: ['Python'],
     demoUrl: '',
@@ -36,17 +37,12 @@ const projects = [
   },
   {
     image: scraperMonitores,
-    name: 'Scraper de monitores Solotodo',
-    // ...existing code...
-    description: 'Script de web scraping en Python que recopila datos detallados de monitores publicados en Solotodo, facilitando el análisis y comparación de precios, modelos y características.',
+    name: 'Scraper monitores solotodo',
+    description: 'Script de web scraping en Python que recopila datos de monitores publicados en Solotodo.',
     technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/solotodo-scraping',
   },
-  
-  
-  
-  // Puedes agregar más proyectos aquí
 ];
 // Mapeo de nombre a icono
 const techIcons = {
@@ -66,48 +62,63 @@ const techIcons = {
 };
 
 export default function Portfolio() {
-    return (
-        <>
-        <div className="portfolio-container">
-          <h2>Proyectos</h2>
-          {/* Elemento 1 */}
-          <div className="portfolio-cards">
-            {projects.map((project, idx) => (
-              <div className="portfolio-card" key={idx}>
-                <div className="portfolio-items-container">
-                  <img src={project.image} alt={project.name} className="portfolio-image" />
-                  <h3 className="portfolio-title">{project.name}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
-                    {project.technologies.map((tech, i) => {
-                      const icon = techIcons[tech] || null;
-                      return (
-                        <span className="portfolio-tech-icon" key={i}>
-                          {icon && <img src={icon} alt={tech} />}
-                        </span>
-                      );
-                    })}
-                  </div>
-                  <div className="portfolio-buttons">
-                    {project.demoUrl ? (
-                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
-                        <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
-                      </a>
-                    ) : (
-                      <button className="portfolio-btn portfolio-btn-disabled" disabled>
-                        <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
-                      </button>
-                    )}
-                    <span style={{display:'inline-block', width:'2px', height:'28px', background:'#ccc', margin:'0 10px', borderRadius:'2px', alignSelf:'center'}}></span>
-                    <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
-                      <FaGithub style={{marginRight:'7px', verticalAlign:'middle'}} />Repositorio
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const card = container.querySelector('.portfolio-card');
+    const scrollAmount = card ? card.offsetWidth + 32 : 300; // 32px = gap
+    if (direction === 'left') {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="portfolio-container">
+      <h2>Proyectos</h2>
+      <div className="scroll-container" style={{display:'flex', alignItems:'center', position:'relative'}}>
+        <button className="scroll-btn left" onClick={() => scroll('left')} aria-label="Anterior">&#8592;</button>
+        <div className="portfolio-cards-horizontal" ref={scrollRef}>
+          {projects.map((project, idx) => (
+            <div className="portfolio-card" key={idx}>
+              <div className="portfolio-items-container">
+                <img src={project.image} alt={project.name} className="portfolio-image" />
+                <h3 className="portfolio-title">{project.name}</h3>
+                <p className="portfolio-description">{project.description}</p>
+                <div className="portfolio-technologies">
+                  {project.technologies.map((tech, i) => {
+                    const icon = techIcons[tech] || null;
+                    return (
+                      <span className="portfolio-tech-icon" key={i}>
+                        {icon && <img src={icon} alt={tech} />}
+                      </span>
+                    );
+                  })}
+                </div>
+                <div className="portfolio-buttons">
+                  {project.demoUrl ? (
+                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                      <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
                     </a>
-                  </div>
+                  ) : (
+                    <button className="portfolio-btn portfolio-btn-disabled" disabled>
+                      <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
+                    </button>
+                  )}
+                  <span style={{display:'inline-block', width:'2px', height:'28px', background:'#ccc', margin:'0 10px', borderRadius:'2px', alignSelf:'center'}}></span>
+                  <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                    <FaGithub style={{marginRight:'7px', verticalAlign:'middle'}} />Repositorio
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-        </>
-    );
+        <button className="scroll-btn right" onClick={() => scroll('right')} aria-label="Siguiente">&#8594;</button>
+      </div>
+    </div>
+  );
 }
