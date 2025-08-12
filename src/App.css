@@ -66,6 +66,17 @@ html, body {
   scroll-snap-align: start;
   height: 100vh;
   scroll-margin-top: 10vh; /* Ajusta este valor a la altura real de tu navbar */
-  padding: 0rem 4rem;
+  padding: 0rem 0rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .section {
+    scroll-margin-top: 0vh; /* Ajusta este valor al alto real del navbar móvil */
+  }
 }
 

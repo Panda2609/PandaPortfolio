@@ -3,10 +3,19 @@ import '../styles/Navbar.css'; // Importa tus estilos CSS
 import { FaLinkedin } from 'react-icons/fa';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/portfolioImages/logotype.png'; // Importa tu logo
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Navbar({ activeSection }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Agrega o quita la clase 'menu-open' al body según el estado del menú
+  React.useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }, [menuOpen]);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);

@@ -150,7 +150,7 @@
     color: var(--text-color);
     cursor: pointer;
     margin-left: auto;
-    z-index: 1002;
+    z-index: 1002 !important;
   }
   .contact-btn{
     margin-left: 0em;
@@ -169,7 +169,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(20, 20, 30, 0.98);
-  z-index: 1001;
+  z-index: 1001 !important;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
