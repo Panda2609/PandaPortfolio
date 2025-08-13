@@ -9,6 +9,7 @@
 @media (max-width: 900px) {
     .presentation-card{
         display: flex;
+        min-height: 0vh !important;
     }
     .panda-container {
         scale: 0.45;
@@ -20,10 +21,7 @@
     .presentation-card {
         flex-direction: column-reverse;
         min-height: unset;
-        padding: 2em 0.5em;
-        align-items: stretch;
-        justify-content: flex-start;
-        text-align: center;
+        padding: 0em 0.5em;
     }
     .left-content, .right-content {
         width: 100% !important;
@@ -62,7 +60,6 @@
         color: var(--hover-text-color) !important;
         background-color: var(--btn-color-hover) !important;
         font-size: 1.4em !important;
-
     }
 }
 .presentation-card {

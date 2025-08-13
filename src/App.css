@@ -75,8 +75,32 @@ html, body {
 }
 
 @media (max-width: 900px) {
-  .section {
-    scroll-margin-top: 0vh; /* Ajusta este valor al alto real del navbar móvil */
+  .main-container {
+    width: 98vw;
+    margin: 0 auto;
   }
+  h2, h3 {
+    font-size: 2rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  p, li, h5, span {
+    font-size: 1rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    max-width: 98vw;
+    box-sizing: border-box;
+  }
+  button, a {
+    min-height: 44px;
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+  .section {
+    scroll-margin-top: 10vh; /* Ajusta este valor al alto real del navbar móvil */
+    padding-left: 0;
+    padding-right: 0;
+  }
+ 
 }
 

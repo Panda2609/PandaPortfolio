@@ -2,7 +2,7 @@
 .aboutme-container {
   display: flex;
   background: transparent;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 2rem 0rem;
 }
 
@@ -12,12 +12,12 @@
 
 .aboutme-items {
   flex: 1 1 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 0 1vw;
   box-sizing: border-box;
+  /* width: 95%; */
 }
 
 .aboutme-item {
@@ -29,6 +29,7 @@
   padding: 1rem 1rem;
   gap: 32px;
   transition: box-shadow 0.2s;
+
 }
 
 .aboutme-item:hover {
@@ -36,7 +37,6 @@
 }
 
 .aboutme-img {
-  
   width: 125px;
   height: 125px;
   object-fit: cover;
@@ -45,14 +45,86 @@
   background: var(--text-color);
 }
 
+.aboutme-modal-img{
+  background: var(--text-color);
+}
+
 .aboutme-text {
   flex: 1;
 }
+  /* Modal styles */
+  .aboutme-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutme-modal {
+    background: var(--card-color);
+    border-radius: var(--rounded-corners);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    max-width: 95vw;
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+  }
+  .aboutme-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  .aboutme-modal-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--btn-color);
+    /* margin-bottom: 1rem; */
+  }
+  .aboutme-modal-text {
+    font-size: 1.05rem;
+    color: #4a5568;
+    margin-top: 0.5rem;
+    background: var(--text-color);
+  border-radius: var(--rounded-corners);
+  padding: 1em;
+  }
+  .aboutme-modal-text p{
+    color: var(--hover-text-color);;
+  }
+  .aboutme-modal-btn {
+    margin-top: 0.7rem;
+    padding: 0.5rem 1.2rem;
+    background: var(--btn-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--rounded-corners);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .aboutme-modal-btn:hover {
+    background: var(--hover-color);
+  }
+  .aboutme-modal h3{
+    margin: .5em;
+  }
 
 
 .aboutme-text p {
   margin: 0;
-  color: #4a5568;
+  color: var(--hover-text-color);
   font-size: var(--font-size-p);
   line-height: 1.2;
 }
@@ -74,7 +146,7 @@
 .chat-answer {
 /* background: #e0e7ef; del chat */
   background: var(--text-color);
-  border-radius: 12px;
+  border-radius: var(--rounded-corners);
   padding: 1rem 1rem;
   color: var(--hover-color);
   font-size: var(--font-size-p);
@@ -160,48 +232,94 @@
     flex-direction: column;
     align-items: center;
   }
-  .aboutme-graphic-bamboo, .aboutme-items {
-    max-width: 100%;
-    flex: none;
-    width: 100%;
-  }
   .aboutme-graphic-bamboo {
-    height: 220px;
-    margin-bottom: 18px;
+    display: none !important;
   }
-  .bamboo-stem {
-    width: 14px;
-    border-radius: 8px;
+  .aboutme-items {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    flex: 1 1 100% !important;
+    margin: 0 !important;
+    padding: 0 0 !important;
   }
-  .bamboo-node {
-    width: 16px;
-    height: 7px;
-    border-radius: 4px;
-    margin: 10px auto;
-  }
-  .bamboo-leaf {
-    width: 22px;
-    height: 9px;
-  }
+
+  
 }
 
 @media (max-width: 700px) {
   .aboutme-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 18px 12px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1em;
+      padding: 1em 2vh;
+      width: 95vw;
+      /* max-width: 600px; */
+      margin: 0 auto 1em auto;
+      box-sizing: border-box;
+  }
+  .aboutme-item:last-child {
+    border-bottom: none;
   }
   .aboutme-img {
     width: 90px;
-    height: 90px;
+    height: auto;
+    margin: 0;
+    display: block;
+    flex-shrink: 0;
+    
   }
   .aboutme-items {
-    gap: 18px;
+    gap: .5em;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+    .aboutme-text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: auto;
+      max-width: none;
+      margin: 0;
+      text-align: left;
+    }
+    .chat-question, .chat-question-formation {
+      text-align: left;
+      width: auto;
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+    .aboutme-modal-btn {
+      margin-top: 0;
+      margin-left: 0;
+      align-self: center;
+      height: 32px;
+      padding: 0 1rem;
+      font-size: 0.98rem;
+    }
+    .chat-answer {
+      display: none;
+    }
+  .aboutme-text {
+    width: 100%;
+    max-width: 340px;
+    margin: 0;
+    text-align: left;
   }
   .chat-answer {
-    padding: 10px 12px;
+    padding: 8px 6px;
     font-size: 0.98rem;
+    max-width: 320px;
+    margin: 0;
+    text-align: left;
+  }
+  .chat-question, .chat-question-formation {
+    text-align: left;
+    width: 100%;
   }
 }
 
