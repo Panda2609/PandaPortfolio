@@ -1,3 +1,61 @@
+/* Modal styles para experiencia */
+.experience-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-container{
+    padding: 2rem 0rem;
+}
+.experience-modal-content {
+    background: var(--card-color);
+    border-radius: var(--rounded-corners);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    max-width: 95vw;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.experience-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.experience-modal-content h3 {
+    margin: .5em;
+}
+.experience-modal-content h5 {
+    margin: .5em;
+    color: var(--hover-color);
+}
+.experience-modal-content p {
+    font-size: 1.05rem;
+    color: #4a5568;
+    margin-top: 0.5rem;
+    background: var(--text-color);
+    border-radius: var(--rounded-corners);
+    padding: 1em;
+}
+.experience-modal-content ul {
+    margin-top: 1em;
+    text-align: left;
+    padding-left: 1.2em;
+}
+.experience-modal-content li {
+    color: var(--hover-text-color);
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
 .experience-container{
     background-color: var(--page-color);
     min-height: 100vh;
@@ -50,7 +108,6 @@
     overflow: hidden;
     text-overflow: ellipsis; /* opcional: si quieres que corte con "..." si se pasa */
     margin-left: 10px;
-    /* background-color: red; */
     border-radius: 10px;
 }
   
@@ -70,7 +127,7 @@
 .title {
     grid-row: 1;
     grid-column: 3;
-    font-size: 2rem;
+    font-size: 2.5rem !important;
     font-weight: bold;
     color: var(--hover-color);
 }
@@ -110,4 +167,72 @@
     width: 100%;
 }
 
+/* Diseño responsivo */
 
+@media (max-width: 900px) {
+    .experience-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .year, .dot, .line {
+        display: none !important;
+    }
+
+    .title, .details {
+        grid-column: 1; /* Todas las celdas en la misma columna */
+        color: var(--text-color);
+    }
+    .title{
+        font-size: 1.2rem !important;
+    }
+
+    .details{
+        padding-left: 0;
+    }
+
+    .experience-list-item{
+        background: var(--card-color);
+        /* padding: 1em; */
+        border-radius: var(--rounded-corners);
+        flex-direction: row;
+        padding: 1em 2vh;
+        width: 95vw;
+        /* max-width: 600px; */
+        margin: 0 auto 1em auto;
+        box-sizing: border-box;
+    }
+    .experience-modal-btn{
+        background-color: var(--btn-color);
+        color: #fff;
+        border: none;
+        border-radius: var(--rounded-corners);
+        padding: 0.5em 1em;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .experience-modal-btn:hover{
+        background-color: var(--hover-color);
+    }
+    .subtitle{
+        color: var(--text-color);
+        font-weight: 600;
+    }
+    .experience-modal-subtitle{
+        font-size: 1.4rem !important;
+    }
+    .experience-modal-detail-container {
+        font-size: 1.05rem;
+        color: #4a5568 !important;
+        margin-top: 0.5rem;
+        background: var(--text-color);
+        border-radius: var(--rounded-corners);
+        padding: 1em;
+    }
+}

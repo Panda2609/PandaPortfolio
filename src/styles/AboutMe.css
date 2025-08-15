@@ -270,7 +270,7 @@
     
   }
   .aboutme-items {
-    gap: .5em;
+    gap: 0em;
     width: 100vw !important;
     max-width: 100vw !important;
     margin: 0 !important;
