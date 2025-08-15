@@ -32,7 +32,7 @@ const technologiesTable = [
 		{ name: 'Python', logo: pythonLogo },
 	],
 	[
-		'Bases de datos',
+		'Data Base',
 		{ name: 'PostgreSQL', logo: postgreSQLLogo },
 		{ name: 'MongoDB', logo: mongoDBLogo },
 		{ name: 'MySQL', logo: mysqlLogo }, // Assuming MySQL is represented by the same logo as Python
@@ -52,9 +52,10 @@ const technologiesTable = [
 ];
 
 export default function Technologies() {
+	
 	return (
-        <div className='habilties-container'>
-			<h2>Habilidades</h2>
+        <div className='habilities-container'>
+			<h2 className='title-habilities'>Habilidades</h2>
 			<div className='description-container'>
 				<p>
 					A lo largo de mi carrera, he adquirido experiencia en una variedad de tecnologías
