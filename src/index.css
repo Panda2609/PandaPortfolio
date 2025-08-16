@@ -16,7 +16,7 @@ h2 {
   font-weight: 700;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-  color: var(--hover-color);
+  color: var(--text-color);
   text-align: start;
   letter-spacing: 1px;
 
@@ -41,7 +41,6 @@ p {
   --card-color: #26332a;
   --navbar-color: #1b2a22;
   --btn-color: #7ec850;
-  --btn-color-rgb: 82, 183, 136;
   --btn-color-hover: #a3d977;
   --text-color: #eafbe7;
   --hover-color: #b6c7b0;

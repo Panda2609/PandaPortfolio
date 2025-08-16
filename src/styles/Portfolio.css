@@ -28,9 +28,13 @@
   }
   .scroll-btn {
     position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
+    top: 20%;
+    /* transform: translateY(-50%); */
     z-index: 10;
+    background-color: var(--btn-color) !important;
+    color: var(--hover-text-color) !important;
+    transform: none !important;
+
   }
   .scroll-btn.left {
     left: 0.1em;
@@ -40,6 +44,23 @@
   }
   .portfolio-divider{
     transform: scaleX(0.1);
+  }
+  .portfolio-description{
+    font-size: 1.3em !important;
+  }
+  .scroll-btn.left, .scroll-btn.right {
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 1.2em;
+  }
+  .scroll-btn.left:hover{
+    transform: none !important;
+    background-color: var(--hover-color) !important;
+  }
+  .scroll-btn.right:hover{
+    transform: none !important;
+    background-color: var(--hover-color) !important;
+    background-color: var(--hover-color) !important;
   }
 }
 
@@ -148,7 +169,7 @@
 }
 
 .portfolio-card:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-.1em) scale(1.03);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
@@ -230,15 +251,15 @@
 .portfolio-title {
   font-size: 2em;
   font-weight: 600;
-  margin: 0.3em;
-  align-items: center;
-  justify-content: center;
+  margin: .8em 0.3em;
+  text-align: center;
+  /* text-transform: uppercase; */
   color: var(--text-color);
 }
 
 .portfolio-description {
   font-size: 1.5em;
   color: var(--text-color);
-  text-align: center;
-    margin: 0.3em;
+  text-align: justify;
+  margin: 0.5em 1em;
 }

@@ -26,7 +26,7 @@
   background: var(--card-color);
   border-radius: var(--rounded-corners);
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 1rem 1rem;
+  padding: 1rem;
   gap: 32px;
   transition: box-shadow 0.2s;
 
@@ -41,7 +41,7 @@
   height: 125px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--btn-color);
+  /* border: 3px solid var(--btn-color); */
   background: var(--text-color);
 }
 
@@ -88,25 +88,28 @@
     height: 90px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--btn-color);
+    /* border: 3px solid var(--btn-color); */
     /* margin-bottom: 1rem; */
   }
   .aboutme-modal-text {
     font-size: 1.05rem;
-    color: #4a5568;
+    color: var(--hover-text-color);
     margin-top: 0.5rem;
     background: var(--text-color);
-  border-radius: var(--rounded-corners);
-  padding: 1em;
+    border-radius: var(--rounded-corners);
+    padding: 1em;
   }
   .aboutme-modal-text p{
-    color: var(--hover-text-color);;
+    color: var(--hover-text-color);
+    font-size: 1em !important;
+    text-align: justify;
+    
   }
   .aboutme-modal-btn {
     margin-top: 0.7rem;
     padding: 0.5rem 1.2rem;
     background: var(--btn-color);
-    color: #fff;
+    color: var(--hover-text-color);
     border: none;
     border-radius: var(--rounded-corners);
     font-size: 1rem;

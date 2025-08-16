@@ -7,12 +7,11 @@ const experiences = [
         title: 'Practicante Arquitectura IT/OT',
         subtitle: 'Codelco, Santiago',
         details: [
-            'Realicé estudios de mercado para la implementación de soluciones tecnológicas en la Corporación para plataformas CMS y gestión de activos tecnológicos (ITSM) con proveedores nacionales e internacionales.',
+            'Realicé estudios de mercado para plataformas gestión de activos tecnológicos (ITSM) con proveedores nacionales e internacionales.',
             'Gestioné proveedores para el desarrollo de un estándar en la corporación para normar el uso de inteligencia artificial (IA).',
             'Pruebas de concepto para IA de Copilot M365 y lentes de realidad mixta (MR), logrando introducir su uso en el equipo.',
             'Configuración e instalación de servidores físicos y virtuales con Vmware.',
-            'Capacitación TOGAF.',
-            'Gestión de procesos para licitación de soluciones tecnológicas.'
+            'Capacitación TOGAF V 9.2.',
         ]
     },
     {
@@ -75,11 +74,10 @@ export default function Experience() {
                             <div className="year">{exp.year}</div>
                             <div className="dot"></div>
                             <div className="title">{exp.title}</div>
-                            <div></div>
                             <div className="line"></div>
                             <div className="details">
-                                <h5>{exp.subtitle}</h5>
-                                <ul>
+                                <h5 className='subtitle2'>{exp.subtitle}</h5>
+                                <ul className='experience-details'>
                                     {exp.details.map((d, i) => <li key={i} className='li-element'>{d}</li>)}
                                 </ul>
                             </div>

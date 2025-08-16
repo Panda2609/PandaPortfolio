@@ -30,11 +30,10 @@ export default function Navbar({ activeSection }) {
       <div className="navbar-content">
         <div className="navbar-left">
           <a href="#home" className="logo-link" onClick={handleMenuClose}>
-            <span>Pan-dev</span>
+            <span>Pandev</span>
             <img src={logo} alt="Logo" className="logo" />
           </a>
         </div>
-
         {/* Menú normal para desktop */}
         <div className="navbar-center">
           <ul>

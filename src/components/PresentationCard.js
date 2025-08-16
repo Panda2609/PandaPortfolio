@@ -21,7 +21,7 @@ export default function PresentationCard() {
                 <h5 className='description'>Enfocado en convertir problemas en productos funcionales y escalables.</h5>
                 <div className="presentation-buttons-row">
                     <button className='btn' onClick={handleDownloadCV}>
-                        <HiDownload style={{marginBottom: '6px'}} />
+                        <HiDownload style={{marginBottom: '4px'}} />
                         Descargar CV
                     </button>
 

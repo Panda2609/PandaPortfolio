@@ -60,7 +60,7 @@
     .btn{
         text-decoration: none;
         color: var(--hover-text-color) !important;
-        background-color: var(--btn-color-hover) !important;
+        background-color: var(--btn-color) !important;
         font-size: 1.4em !important;
         width: 80%;
         margin: 0 auto; /* Centra el botón */

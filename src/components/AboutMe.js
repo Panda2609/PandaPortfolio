@@ -46,7 +46,7 @@ export default function AboutMe() {
     return (
         <>
             <div className="aboutme-container2">
-                <h2>Sobre mí</h2>
+                <h2 >Sobre mí</h2>
                 <div className="aboutme-container">
                     <div className="aboutme-items">
                         {aboutMeBlocks.map(block => (
