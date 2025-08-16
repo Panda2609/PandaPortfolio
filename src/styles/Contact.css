@@ -1,3 +1,72 @@
+@media (max-width: 700px) {
+  .contact-container {
+    background-color: var(--page-color);
+    min-height: 100vh;
+    border-radius: var(--rounded-corners);
+    padding: 2rem 0rem;
+  }
+  .contact-form-container {
+    padding: 1em 2vw !important;
+    max-width: 98vw;
+    margin: 0em auto !important;
+    box-shadow: none;
+    border-radius: var(--rounded-corners);
+    width: 95vw;
+    margin: 0 auto 1em auto;
+    box-sizing: border-box;
+  }
+  .contact-form {
+    gap: 1em;
+    width: 100%;
+  }
+  .contact-form label {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1em;
+    padding: 0.7em 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-form textarea {
+    min-height: 6em;
+    max-width: 100%;
+  }
+  .send-btn {
+    padding: 0.7em 2em;
+    font-size: 1em;
+    margin-top: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .copy-email-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    margin-top: 2em;
+    padding: 0.7em 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .copy-email-container span {
+    font-size: 1em;
+    word-break: break-all;
+  }
+  .copy-btn {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+  }
+  .label{
+    font-weight: 600 !important;
+  }
+  .my-email{
+    font-weight: 600 !important;
+  }
+}
 /* Estilos para el formulario de contacto */
 
 .contact-container{
@@ -56,7 +125,7 @@
   background: var(--btn-color);
   color: var(--hover-text-color);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--rounded-corners);
   padding: 0.7em 2em;
   font-size: 1.1em;
   font-weight: bold;
@@ -85,12 +154,16 @@
   background: var(--hover-color);
   color: var(--hover-text-color);
   border: none;
-  border-radius: 8px;
+  border-radius:  var(--rounded-corners);
   padding: 0.4em 1.2em;
   font-size: 1em;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .copy-btn:hover {
   background: var(--btn-color-hover);

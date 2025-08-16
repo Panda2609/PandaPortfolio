@@ -9,7 +9,7 @@
     justify-content: center;
 }
 .item-container{
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
 }
 .experience-modal-content {
     background: var(--card-color);

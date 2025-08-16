@@ -29,7 +29,7 @@ export default function Contact() {
                 <h2>Contáctame</h2>
                 <div className='contact-form-container'>
                     <form className='contact-form' onSubmit={handleSubmit}>
-                        <label htmlFor='nombre'>Nombre</label>
+                        <label htmlFor='nombre' className='label'>Nombre</label>
                         <input
                             type='text'
                             id='nombre'
@@ -38,7 +38,7 @@ export default function Contact() {
                             onChange={handleChange}
                             required
                         />
-                        <label htmlFor='email'>Email</label>
+                        <label htmlFor='email' className='label'>Email</label>
                         <input
                             type='email'
                             id='email'
@@ -47,7 +47,7 @@ export default function Contact() {
                             onChange={handleChange}
                             required
                         />
-                        <label htmlFor='mensaje'>Mensaje</label>
+                        <label htmlFor='mensaje' className='label'>Mensaje</label>
                         <textarea
                             id='mensaje'
                             name='mensaje'
@@ -58,7 +58,7 @@ export default function Contact() {
                         <button type='submit' className='send-btn'>Enviar</button>
                     </form>
                     <div className='copy-email-container'>
-                        <span>{myEmail}</span>
+                        <span className='my-email'>{myEmail}</span>
                         <button className='copy-btn' onClick={handleCopy} type='button'>
                             {copied ? '¡Copiado!' : 'Copiar email'}
                         </button>
