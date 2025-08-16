@@ -49,7 +49,7 @@ export default function Navbar({ activeSection }) {
         <div className="navbar-right">
           <ul>
             <li>
-                <a href="https://www.linkedin.com/in/banda-cristian/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/banda-cristian/" target="_blank" rel="noopener noreferrer" >
                     <FaLinkedin className='social-logo-navbar' />
                 </a>
             </li>
