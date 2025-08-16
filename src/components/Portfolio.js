@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import '../styles/Portfolio.css';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
@@ -63,16 +63,28 @@ const techIcons = {
 
 export default function Portfolio() {
   const scrollRef = useRef(null);
+  const [current, setCurrent] = useState(0);
+
+  // Detecta si es móvil
+  const isMobile = window.innerWidth <= 700;
 
   const scroll = (direction) => {
-    const container = scrollRef.current;
-    if (!container) return;
-    const card = container.querySelector('.portfolio-card');
-    const scrollAmount = card ? card.offsetWidth + 32 : 300; // 32px = gap
-    if (direction === 'left') {
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    if (isMobile) {
+      if (direction === 'left') {
+        setCurrent((prev) => (prev > 0 ? prev - 1 : prev));
+      } else {
+        setCurrent((prev) => (prev < projects.length - 1 ? prev + 1 : prev));
+      }
     } else {
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      const container = scrollRef.current;
+      if (!container) return;
+      const card = container.querySelector('.portfolio-card');
+      const scrollAmount = card ? card.offsetWidth + 32 : 300; // 32px = gap
+      if (direction === 'left') {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
     }
   };
 
@@ -81,15 +93,15 @@ export default function Portfolio() {
       <h2>Proyectos</h2>
       <div className="scroll-container" style={{display:'flex', alignItems:'center', position:'relative'}}>
         <button className="scroll-btn left" onClick={() => scroll('left')} aria-label="Anterior">&#8592;</button>
-        <div className="portfolio-cards-horizontal" ref={scrollRef}>
-          {projects.map((project, idx) => (
-            <div className="portfolio-card" key={idx}>
+        {isMobile ? (
+          <div className="portfolio-cards" style={{width: '100%'}}>
+            <div className="portfolio-card" key={current}>
               <div className="portfolio-items-container">
-                <img src={project.image} alt={project.name} className="portfolio-image" />
-                <h3 className="portfolio-title">{project.name}</h3>
-                <p className="portfolio-description">{project.description}</p>
+                <img src={projects[current].image} alt={projects[current].name} className="portfolio-image" />
+                <h3 className="portfolio-title">{projects[current].name}</h3>
+                <p className="portfolio-description">{projects[current].description}</p>
                 <div className="portfolio-technologies">
-                  {project.technologies.map((tech, i) => {
+                  {projects[current].technologies.map((tech, i) => {
                     const icon = techIcons[tech] || null;
                     return (
                       <span className="portfolio-tech-icon" key={i}>
@@ -99,8 +111,8 @@ export default function Portfolio() {
                   })}
                 </div>
                 <div className="portfolio-buttons">
-                  {project.demoUrl ? (
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                  {projects[current].demoUrl ? (
+                    <a href={projects[current].demoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
                       <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
                     </a>
                   ) : (
@@ -108,15 +120,52 @@ export default function Portfolio() {
                       <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
                     </button>
                   )}
-                  <span style={{display:'inline-block', width:'2px', height:'28px', background:'#ccc', margin:'0 10px', borderRadius:'2px', alignSelf:'center'}}></span>
-                  <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                  <span className="portfolio-divider"></span>
+                  <a href={projects[current].repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
                     <FaGithub style={{marginRight:'7px', verticalAlign:'middle'}} />Repositorio
                   </a>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ) : (
+          <div className="portfolio-cards-horizontal" ref={scrollRef}>
+            {projects.map((project, idx) => (
+              <div className="portfolio-card" key={idx}>
+                <div className="portfolio-items-container">
+                  <img src={project.image} alt={project.name} className="portfolio-image" />
+                  <h3 className="portfolio-title">{project.name}</h3>
+                  <p className="portfolio-description">{project.description}</p>
+                  <div className="portfolio-technologies">
+                    {project.technologies.map((tech, i) => {
+                      const icon = techIcons[tech] || null;
+                      return (
+                        <span className="portfolio-tech-icon" key={i}>
+                          {icon && <img src={icon} alt={tech} />}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  <div className="portfolio-buttons">
+                    {project.demoUrl ? (
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                        <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
+                      </a>
+                    ) : (
+                      <button className="portfolio-btn portfolio-btn-disabled" disabled>
+                        <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
+                      </button>
+                    )}
+                    <span style={{display:'inline-block', width:'2px', height:'28px', background:'#ccc', margin:'0 10px', borderRadius:'2px', alignSelf:'center'}}></span>
+                    <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                      <FaGithub style={{marginRight:'7px', verticalAlign:'middle'}} />Repositorio
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
         <button className="scroll-btn right" onClick={() => scroll('right')} aria-label="Siguiente">&#8594;</button>
       </div>
     </div>

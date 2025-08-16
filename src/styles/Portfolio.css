@@ -1,3 +1,47 @@
+@media (max-width: 700px) {
+  .portfolio-cards {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    gap: 0;
+  }
+  .portfolio-card {
+    min-width: 95vw !important;
+    max-width: 95vw !important;
+    width: 95vw !important;
+    /* margin: 0 0vw !important; */
+    border-radius: var(--rounded-corners);
+    box-shadow: none;
+  }
+  .portfolio-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--rounded-corners);
+  }
+  .portfolio-container {
+    padding: 0.5em 0;
+    min-height: unset;
+  }
+  .scroll-btn {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .scroll-btn.left {
+    left: 0.1em;
+  }
+  .scroll-btn.right {
+    right: 0.1em;
+  }
+  .portfolio-divider{
+    transform: scaleX(0.1);
+  }
+}
 
 /* Sidebar horizontal para proyectos */
 .portfolio-cards-horizontal {
@@ -14,7 +58,7 @@
 }
 .portfolio-cards-horizontal::-webkit-scrollbar-thumb {
   background: var(--hover-color);
-  border-radius: 4px;
+  border-radius: var(--rounded-corners);
 }
 
 .portfolio-container{
@@ -59,6 +103,14 @@
   height: 100%;
   padding: 1rem 0.5rem;
 
+}
+.portfolio-divider{
+  background-color: red;
+  display:flex; 
+  width:1px;
+  height:auto;
+  background:#ccc; 
+  margin: 0 0.5em;
 }
 
 /* Botones de scroll lateral */
@@ -153,6 +205,10 @@
   transition: background 0.2s;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .portfolio-btn:hover {
