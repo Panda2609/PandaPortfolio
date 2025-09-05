@@ -18,6 +18,7 @@ const projects = [
     technologies: ['React', 'CSS', 'JavaScript', 'Node.js', 'MongoDB'],
     demoUrl: 'https://panda2609.github.io/pichanga/',
     repoUrl: 'https://github.com/Panda2609/pichanga',
+  status: false,
   },
   {
     image: pymeIMG,
@@ -26,6 +27,8 @@ const projects = [
     technologies: ['React', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/my-pyme/',
     repoUrl: 'https://github.com/Panda2609/my-pyme',
+  status: true,
+
   },
   {
     image: generadorContrasenia,
@@ -34,6 +37,7 @@ const projects = [
     technologies: ['React', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/password-generator/',
     repoUrl: 'https://github.com/Panda2609/password-generator',
+  status: true,
   },
   {
     image: scraperAutos,
@@ -42,6 +46,7 @@ const projects = [
     technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/scrapper_python_autos',
+  status: true,
   },
   {
     image: scraperMonitores,
@@ -50,6 +55,7 @@ const projects = [
     technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/solotodo-scraping',
+  status: true,
   },
 ];
 // Mapeo de nombre a icono
@@ -103,7 +109,8 @@ export default function Portfolio() {
         <button className="scroll-btn left" onClick={() => scroll('left')} aria-label="Anterior">&#8592;</button>
         {isMobile ? (
           <div className="portfolio-cards" style={{width: '100%'}}>
-            <div className="portfolio-card" key={current}>
+            <div className="portfolio-card" key={current} style={{position:'relative'}}>
+              <span className={`project-badge ${projects[current].status ? 'finished' : 'in-progress'}`}>{projects[current].status ? 'Terminado' : 'En proceso'}</span>
               <div className="portfolio-items-container">
                 <img src={projects[current].image} alt={projects[current].name} className="portfolio-image" />
                 <h3 className="portfolio-title">{projects[current].name}</h3>
@@ -139,7 +146,8 @@ export default function Portfolio() {
         ) : (
           <div className="portfolio-cards-horizontal" ref={scrollRef}>
             {projects.map((project, idx) => (
-              <div className="portfolio-card" key={idx}>
+              <div className="portfolio-card" key={idx} style={{position:'relative'}}>
+                <span className={`project-badge ${project.status ? 'finished' : 'in-progress'}`}>{project.status ? 'Terminado' : 'En proceso'}</span>
                 <div className="portfolio-items-container">
                   <img src={project.image} alt={project.name} className="portfolio-image" />
                   <h3 className="portfolio-title">{project.name}</h3>
