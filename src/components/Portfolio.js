@@ -4,13 +4,21 @@ import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
 //import images
-import proyect1Img from '../images/portfolioImages/proyect1.jpg';
 import pymeIMG from '../images/portfolioImages/pyme.png';
 import generadorContrasenia from '../images/portfolioImages/generador_contrasenias.png';
 import scraperAutos from '../images/portfolioImages/scaper.png';
 import scraperMonitores from '../images/portfolioImages/monitor_scraping.png';
+import pichangaImg from '../images/portfolioImages/pichanga.png';
 
 const projects = [
+  {
+    image: pichangaImg,
+    name: 'Pichanga App',
+    description: 'Aplicación end to end para arrendar canchas, gestionar reservas y simular pagos en línea.',
+    technologies: ['React', 'CSS', 'JavaScript', 'Node.js', 'MongoDB'],
+    demoUrl: 'https://panda2609.github.io/pichanga/',
+    repoUrl: 'https://github.com/Panda2609/pichanga',
+  },
   {
     image: pymeIMG,
     name: 'Crud Pymes',
