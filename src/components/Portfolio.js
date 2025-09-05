@@ -15,7 +15,7 @@ const projects = [
     image: pichangaImg,
     name: 'Pichanga App',
     description: 'Aplicación end to end para arrendar canchas, gestionar reservas y simular pagos en línea.',
-    technologies: ['React', 'CSS', 'JavaScript', 'Node.js', 'MongoDB'],
+    technologies: ['React', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'Google Cloud'],
     demoUrl: 'https://panda2609.github.io/pichanga/',
     repoUrl: 'https://github.com/Panda2609/pichanga',
   status: false,
