@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import '../styles/Contact.css';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
     const [form, setForm] = useState({ nombre: '', email: '', mensaje: '' });
     const [copied, setCopied] = useState(false);
-    const myEmail = 'banda2609@gmail.com'; // Cambia por tu email real
+    const myEmail = process.env.REACT_APP_EMAIL;
+    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+    const USER_ID = process.env.REACT_APP_USER_ID;
+    console.log(SERVICE_ID, TEMPLATE_ID, USER_ID);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,9 +17,23 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aquí puedes agregar lógica para enviar el formulario (por ejemplo, a un backend o servicio de email)
-        alert('¡Mensaje enviado!');
-        setForm({ nombre: '', email: '', mensaje: '' });
+        emailjs.send(
+            SERVICE_ID,
+            TEMPLATE_ID,
+            {
+                name: form.nombre,
+                email: form.email,
+                message: form.mensaje,
+            },
+            USER_ID
+        )
+        .then(() => {
+            alert('¡Mensaje enviado!');
+            setForm({ nombre: '', email: '', mensaje: '' });
+        })
+        .catch(() => {
+            alert('Error al enviar el mensaje.');
+        });
     };
 
     const handleCopy = () => {
