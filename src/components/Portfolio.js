@@ -9,8 +9,18 @@ import generadorContrasenia from '../images/portfolioImages/generador_contraseni
 import scraperAutos from '../images/portfolioImages/scaper.png';
 import scraperMonitores from '../images/portfolioImages/monitor_scraping.png';
 import pichangaImg from '../images/portfolioImages/pichanga.png';
+import RHImage from '../images/portfolioImages/rh_core.png';
 
 const projects = [
+  {
+    image: RHImage,
+    name: 'RH Core',
+    description: 'Sistema para la administración del personal y sus recursos.',
+    technologies: ['React', 'CSS', 'JavaScript'],
+    demoUrl: 'https://panda2609.github.io/rh-core-web/',
+    repoUrl: 'https://github.com/Panda2609/rh-core-web',
+    status: false,
+  },
   {
     image: pichangaImg,
     name: 'Pichanga App',
@@ -18,7 +28,7 @@ const projects = [
     technologies: ['React', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'Google Cloud'],
     demoUrl: 'https://panda2609.github.io/pichanga/',
     repoUrl: 'https://github.com/Panda2609/pichanga',
-  status: false,
+    status: true,
   },
   {
     image: pymeIMG,
@@ -27,7 +37,7 @@ const projects = [
     technologies: ['React', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/my-pyme/',
     repoUrl: 'https://github.com/Panda2609/my-pyme',
-  status: true,
+    status: true,
 
   },
   {
@@ -37,7 +47,7 @@ const projects = [
     technologies: ['React', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/password-generator/',
     repoUrl: 'https://github.com/Panda2609/password-generator',
-  status: true,
+    status: true,
   },
   {
     image: scraperAutos,
@@ -46,7 +56,7 @@ const projects = [
     technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/scrapper_python_autos',
-  status: true,
+    status: true,
   },
   {
     image: scraperMonitores,
@@ -55,7 +65,7 @@ const projects = [
     technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/solotodo-scraping',
-  status: true,
+    status: true,
   },
 ];
 // Mapeo de nombre a icono
