@@ -15,7 +15,7 @@ const aboutMeBlocks = [
         key: 'education',
         img: pandaEducation,
         title: 'Formación',
-        text: 'Soy Ingeniero Civil en Computación de la Universidad de Talca, mi Minor en Nuevas tecnologías Computacionales me otorga la capacidad de aprender rápidamente nuevas tecnologías y adaptarme a diferentes entornos de trabajo. Actualmente, me sigo capacitando en tecnologías como React y Nextjs.'
+        text: 'Soy Ingeniero Civil en Computación de la Universidad de Talca, mi Minor en Nuevas tecnologías Computacionales me otorga la capacidad de aprender rápidamente nuevas tecnologías y adaptarme a diferentes entornos de trabajo. Además, cuento con un Diplomado en Diseño y Desarrollo Web que fortaleció mis habilidades en frontend y backend. Actualmente, me sigo capacitando en tecnologías como React y Nextjs.'
     },
     {
         key: 'hobbies',
