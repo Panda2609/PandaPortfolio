@@ -16,7 +16,7 @@ export default function PresentationCard() {
     return (
         <div className="presentation-card">
             <div className="left-content">
-                <h3 className='name'>Cristian Banda G.</h3>
+                <h3 className='name'>Cristian Banda Guzmán</h3>
                 <h2 className='role'>Desarrollador Junior</h2>
                 <h5 className='description'>Enfocado en convertir problemas en productos funcionales y escalables.</h5>
                 <div className="presentation-buttons-row">
