@@ -3,15 +3,25 @@ import '../styles/Experience.css';
 
 const experiences = [
     {
+        year: 'Jun 2024 — Hoy',
+        title: 'Desarrollos de proyectos personales',
+        subtitle: 'Proyectos propios',
+        details: [
+            'Prototipo de sistema de administración de personas.',
+            'Prototipo para arriendo de canchas deportivas end to end.',
+            'Herramienta generadora de contraseñas seguras.',
+            'Scripts de web scraping para extracción de datos desde sitios web.'
+        ]
+    },
+    {
         year: 'Ago 2024 — Ene 2025',
         title: 'Practicante Arquitectura IT/OT',
         subtitle: 'Codelco, Santiago',
         details: [
-            'Realicé estudios de mercado para plataformas gestión de activos tecnológicos (ITSM) con proveedores nacionales e internacionales.',
-            'Gestioné proveedores para el desarrollo de un estándar en la corporación para normar el uso de inteligencia artificial (IA).',
-            'Pruebas de concepto para IA de Copilot M365 y lentes de realidad mixta (MR), logrando introducir su uso en el equipo.',
-            'Configuración e instalación de servidores físicos y virtuales con Vmware.',
-            'Capacitación TOGAF V 9.2.',
+            'Realiza estudios tecnológicos para la implementación de sistemas ITSM, evaluando más de 3 herramientas nacionales e internacionales, aportando a la toma de decisiones estratégicas.',
+            'Gestiona la relación con proveedores clave para el desarrollo de un estándar de IA corporativo, fortaleciendo la estrategia de innovación tecnológica.',
+            'Elabora pruebas de concepto para IA de Copilot M365 y lentes de realidad mixta (MR), aportando a la exploración de nuevas soluciones digitales.',
+            'Se capacita en Arquitectura Empresarial TOGAF V9.2, fortaleciendo la visión estratégica de TI.'
         ]
     },
     {
@@ -19,10 +29,9 @@ const experiences = [
         title: 'Desarrollador Trainee',
         subtitle: 'Spawn, Curicó',
         details: [
-            'Participación en el desarrollo de aplicaciones web responsivas utilizando HTML5, CSS3, JavaScript y Angular.',
-            'Apoyo en la implementación de APIs RESTful para el consumo de datos, trabajando en conjunto al backend para integración.',
-            'Contribución en testing y QA haciendo uso de Jasmine y Postman.',
-            'Documentación técnica de componentes y procesos de desarrollo facilitando la escalabilidad del código.'
+            'Participa en el desarrollo full stack de aplicaciones web responsive con HTML5, CSS3, JavaScript y Angular, mejorando la experiencia de usuario en proyectos internos, reduciendo un 15% los reportes de errores de la interfaz.',
+            'Implementa APIs RESTful integrando 3 sistemas distintos, reduciendo los tiempos de consulta en un 20%.',
+            'Colabora en actividades de QA, apoyando en pruebas funcionales y de integración para validar entregables, contribuyendo a la mejora de la calidad del producto y a la reducción de incidencias en producción.'
         ]
     }
 ];
