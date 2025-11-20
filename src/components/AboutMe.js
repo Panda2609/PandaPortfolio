@@ -1,25 +1,22 @@
 import '../styles/AboutMe.css';
-import pandaEducation from '../images/portfolioImages/PandaEducation.png';
-import pandaGamer from '../images/portfolioImages/PandaGamer.png';
-import pandaAboutMe from '../images/portfolioImages/PandaAboutMe.png';
 import { useState } from 'react';
 
 const aboutMeBlocks = [
     {
         key: 'about',
-        img: pandaAboutMe,
+        img: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/page-elements/PandaAboutMe.png',
         title: 'Sobre mi',
         text: 'Apasionado por la creación de soluciones tecnológicas que aporten valor real. Me especializo en el desarrollo web con tecnologías basadas en JavaScript, construyendo aplicaciones web completas que combinan usabilidad y escalabilidad. Aprendo rápido, me adapto con facilidad y trabajo con compromiso en equipo.'
     },
     {
         key: 'education',
-        img: pandaEducation,
+        img: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/page-elements/PandaEducation.png',
         title: 'Formación',
         text: 'Soy Ingeniero Civil en Computación de la Universidad de Talca, mi Minor en Nuevas tecnologías Computacionales me otorga la capacidad de aprender rápidamente nuevas tecnologías y adaptarme a diferentes entornos de trabajo. Además, cuento con un Diplomado en Diseño y Desarrollo Web que fortaleció mis habilidades en frontend y backend. Actualmente, me sigo capacitando en tecnologías como React y Nextjs.'
     },
     {
         key: 'hobbies',
-        img: pandaGamer,
+        img: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/page-elements/PandaGamer.png',
         title: 'Hobbies',
         text: 'Disfruto mucho de mi tiempo libre jugando videojuegos, programando nuevos proyectos, jugando futbol con amigos y compartiendo buenas conversaciones en linea. Estas actividades me permiten relajarme, aprender y mantenerme conectado con quienes me rodean.'
     }
