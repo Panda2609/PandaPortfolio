@@ -1,50 +1,35 @@
 import  '../styles/Technologies.css';
 
-import angularLogo from '../images/Angular.svg';
-import javaLogo from '../images/Java.svg';
-import javascriptLogo from '../images/JavaScript.svg';
-import gitLogo from '../images/Git.svg';
-import typescriptLogo from '../images/TypeScript.svg';
-import htmlLogo from '../images/HTML5.svg';
-import cssLogo from '../images/CSS3.svg';
-import reactLogo from '../images/React.svg';
-import nodeLogo from '../images/Node.js.svg';
-import googleCloudLogo from '../images/Google Cloud.svg';
-import postgreSQLLogo from '../images/PostgresSQL.svg';
-import mysqlLogo from '../images/Mysql.svg';
-import mongoDBLogo from '../images/MongoDB.svg';
-import pythonLogo from '../images/Python.svg';
-
 const technologiesTable = [
 	[
 		'Frontend',
-		{ name: 'React', logo: reactLogo },
-		{ name: 'Angular', logo: angularLogo },
-		{ name: 'JavaScript', logo: javascriptLogo },
-		{ name: 'TypeScript', logo: typescriptLogo },
-		{ name: 'HTML', logo: htmlLogo },
-		{ name: 'CSS', logo: cssLogo },
+		{ name: 'React', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/React.svg' },
+		{ name: 'Angular', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Angular.svg' },
+		{ name: 'JavaScript', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/JavaScript.svg' },
+		{ name: 'TypeScript', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/TypeScript.svg' },
+		{ name: 'HTML', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/HTML5.svg' },
+		{ name: 'CSS', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/CSS3.svg' },
 	],
 	[
 		'Backend',
-		{ name: 'Node.js', logo: nodeLogo },
-		{ name: 'Java', logo: javaLogo },
-		{ name: 'Python', logo: pythonLogo },
+		{ name: 'Node.js', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Node.js.svg' },
+		{ name: 'Java', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Java.svg' },
+		{ name: 'Python', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Python.svg' },
 	],
 	[
 		'Data Base',
-		{ name: 'PostgreSQL', logo: postgreSQLLogo },
-		{ name: 'MongoDB', logo: mongoDBLogo },
-		{ name: 'MySQL', logo: mysqlLogo }, // Assuming MySQL is represented by the same logo as Python
+		{ name: 'PostgreSQL', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/PostgresSQL.svg' },
+		{ name: 'MongoDB', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/MongoDB.svg' },
+		{ name: 'MySQL', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Mysql.svg' },
 
 	],
 	[
 		'Cloud',
-		{ name: 'Google Cloud', logo: googleCloudLogo },
+		{ name: 'Google Cloud', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Google Cloud.svg' },
 	],
 	[
 		'Otros',
-		{ name: 'Git', logo: gitLogo },
+		{ name: 'Git', logo: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Git.svg' },
 		{ name: 'Metodología Scrum' },
 		{ name: 'PXP' },
 		{ name: 'Canvan' },
