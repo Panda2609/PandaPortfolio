@@ -3,17 +3,10 @@ import '../styles/Portfolio.css';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
-//import images
-import pymeIMG from '../images/portfolioImages/pyme.png';
-import generadorContrasenia from '../images/portfolioImages/generador_contrasenias.png';
-import scraperAutos from '../images/portfolioImages/scaper.png';
-import scraperMonitores from '../images/portfolioImages/monitor_scraping.png';
-import pichangaImg from '../images/portfolioImages/pichanga.png';
-import RHImage from '../images/portfolioImages/rh_core.png';
 
 const projects = [
   {
-    image: RHImage,
+    image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/rh_core.png',
     name: 'RH Core',
     description: 'Sistema para la administración del personal y sus recursos.',
     technologies: ['React', 'CSS', 'JavaScript'],
@@ -22,7 +15,7 @@ const projects = [
     status: false,
   },
   {
-    image: pichangaImg,
+    image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/pichanga.png',
     name: 'Pichanga App',
     description: 'Aplicación end to end para arrendar canchas, gestionar reservas y simular pagos en línea.',
     technologies: ['React', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'Google Cloud'],
@@ -31,7 +24,7 @@ const projects = [
     status: true,
   },
   {
-    image: pymeIMG,
+    image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/pyme.png',
     name: 'Crud Pymes',
     description: 'Sistema de gestión para pequeñas y medianas empresas con operaciones CRUD completas.',
     technologies: ['React', 'CSS', 'JavaScript'],
@@ -41,7 +34,7 @@ const projects = [
 
   },
   {
-    image: generadorContrasenia,
+    image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/generador_contrasenias.png',
     name: 'Generador contraseñas',
     description: 'Herramienta para crear contraseñas seguras y personalizables con diferentes criterios.',
     technologies: ['React', 'CSS', 'JavaScript'],
@@ -50,7 +43,7 @@ const projects = [
     status: true,
   },
   {
-    image: scraperAutos,
+    image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/scaper.png',
     name: 'Scraper autos Mercadolibre',
     description: 'Script de web scraping para extraer información de vehículos desde sitios web.',
     technologies: ['Python'],
@@ -59,7 +52,7 @@ const projects = [
     status: true,
   },
   {
-    image: scraperMonitores,
+    image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/monitor_scraping.png',
     name: 'Scraper monitores solotodo',
     description: 'Script de web scraping en Python que recopila datos de monitores publicados en Solotodo.',
     technologies: ['Python'],
@@ -70,19 +63,19 @@ const projects = [
 ];
 // Mapeo de nombre a icono
 const techIcons = {
-  'React': require('../images/React.svg').default,
-  'CSS': require('../images/CSS3.svg').default,
-  'JavaScript': require('../images/JavaScript.svg').default,
-  'TypeScript': require('../images/TypeScript.svg').default,
-  'HTML': require('../images/HTML5.svg').default,
-  'Angular': require('../images/Angular.svg').default,
-  'Node.js': require('../images/Node.js.svg').default,
-  'Java': require('../images/Java.svg').default,
-  'Python': require('../images/Python.svg').default,
-  'PostgreSQL': require('../images/PostgresSQL.svg').default,
-  'MongoDB': require('../images/MongoDB.svg').default,
-  'Git': require('../images/Git.svg').default,
-  'Google Cloud': require('../images/Google Cloud.svg').default,
+  'React':'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Angular.svg',
+  'CSS': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/CSS3.svg' ,
+  'JavaScript': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/JavaScript.svg',
+  'TypeScript': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/TypeScript.svg',
+  'HTML': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/HTML.svg',
+  'Angular': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Angular.svg',
+  'Node.js': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Node.js.svg',
+  'Java': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Java.svg',
+  'Python': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Python.svg',
+  'PostgreSQL': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/PostgresSQL.svg',
+  'MongoDB': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/MongoDB.svg',
+  'Git': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Git.svg',
+  'Google Cloud': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Google Cloud.svg',
 };
 
 export default function Portfolio() {
