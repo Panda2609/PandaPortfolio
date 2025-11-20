@@ -2,7 +2,6 @@ import { FaGithub } from 'react-icons/fa6';
 import '../styles/Navbar.css'; // Importa tus estilos CSS
 import { FaLinkedin } from 'react-icons/fa';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../images/portfolioImages/logotype.png'; // Importa tu logo
 import React, { useState } from 'react';
 
 export default function Navbar({ activeSection }) {
@@ -31,7 +30,7 @@ export default function Navbar({ activeSection }) {
         <div className="navbar-left">
           <a href="#home" className="logo-link" onClick={handleMenuClose}>
             <span>Pandev</span>
-            <img src={logo} alt="Logo" className="logo" />
+            <img src="https://storage.googleapis.com/bucket-panda-portfolio/resources/page-elements/logotype.png" alt="Logo" className="logo" />
           </a>
         </div>
         {/* Menú normal para desktop */}
