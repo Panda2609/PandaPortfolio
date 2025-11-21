@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d7b7bc5.css",
-    "main.js": "/static/js/main.854864da.js",
+    "main.css": "/static/css/main.dc35fb1f.css",
+    "main.js": "/static/js/main.3b0fb4ab.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/Mairy Book.otf": "/static/media/Mairy Book.381fc8fabe41397bef21.otf",
     "static/media/Mairy Extrabold.otf": "/static/media/Mairy Extrabold.c00cab6553ab4c274cfd.otf",
     "index.html": "/index.html",
-    "main.4d7b7bc5.css.map": "/static/css/main.4d7b7bc5.css.map",
-    "main.854864da.js.map": "/static/js/main.854864da.js.map",
+    "main.dc35fb1f.css.map": "/static/css/main.dc35fb1f.css.map",
+    "main.3b0fb4ab.js.map": "/static/js/main.3b0fb4ab.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d7b7bc5.css",
-    "static/js/main.854864da.js"
+    "static/css/main.dc35fb1f.css",
+    "static/js/main.3b0fb4ab.js"
   ]
 }
