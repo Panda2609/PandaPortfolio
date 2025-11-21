@@ -204,7 +204,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1em;
+  margin-right: 1em;
+  justify-content: center;
   
 }
 
@@ -220,6 +224,14 @@
   margin: 0;
   padding: 0.4em;
   box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-tech-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio-tech-icon img {
@@ -227,6 +239,41 @@
   height: 1.7em;
   object-fit: contain;
   display: block;
+}
+
+.tech-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--hover-color);
+  color: var(--card-color);
+  padding: 0.5em 0.8em;
+  border-radius: 0.4em;
+  font-size: 0.9em;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 10;
+  margin-bottom: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tech-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.4em solid transparent;
+  border-top-color: var(--hover-color);
+}
+
+.portfolio-tech-icon:hover .tech-tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .portfolio-buttons {

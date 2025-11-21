@@ -9,16 +9,16 @@ const projects = [
     image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/rh_core.png',
     name: 'RH Core',
     description: 'Sistema para la administración del personal y sus recursos.',
-    technologies: ['React', 'CSS', 'JavaScript'],
+    technologies: ['React', 'CSS', 'JavaScript', 'HTML'],
     demoUrl: 'https://panda2609.github.io/rh-core-web/',
     repoUrl: 'https://github.com/Panda2609/rh-core-web',
-    status: false,
+    status: true,
   },
   {
     image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/pichanga.png',
     name: 'Pichanga App',
     description: 'Aplicación end to end para arrendar canchas, gestionar reservas y simular pagos en línea.',
-    technologies: ['React', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'Google Cloud'],
+    technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'Google Cloud'],
     demoUrl: 'https://panda2609.github.io/pichanga/',
     repoUrl: 'https://github.com/Panda2609/pichanga',
     status: true,
@@ -27,7 +27,7 @@ const projects = [
     image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/pyme.png',
     name: 'Crud Pymes',
     description: 'Sistema de gestión para pequeñas y medianas empresas con operaciones CRUD completas.',
-    technologies: ['React', 'CSS', 'JavaScript'],
+    technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/my-pyme/',
     repoUrl: 'https://github.com/Panda2609/my-pyme',
     status: true,
@@ -37,7 +37,7 @@ const projects = [
     image: 'https://storage.googleapis.com/bucket-panda-portfolio/resources/portfolioImages/generador_contrasenias.png',
     name: 'Generador contraseñas',
     description: 'Herramienta para crear contraseñas seguras y personalizables con diferentes criterios.',
-    technologies: ['React', 'CSS', 'JavaScript'],
+    technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/password-generator/',
     repoUrl: 'https://github.com/Panda2609/password-generator',
     status: true,
@@ -63,11 +63,11 @@ const projects = [
 ];
 // Mapeo de nombre a icono
 const techIcons = {
-  'React':'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Angular.svg',
+  'React':'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/React.svg',
   'CSS': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/CSS3.svg' ,
   'JavaScript': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/JavaScript.svg',
   'TypeScript': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/TypeScript.svg',
-  'HTML': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/HTML.svg',
+  'HTML': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/HTML5.svg',
   'Angular': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Angular.svg',
   'Node.js': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Node.js.svg',
   'Java': 'https://storage.googleapis.com/bucket-panda-portfolio/resources/technologies-svg/Java.svg',
@@ -122,8 +122,9 @@ export default function Portfolio() {
                   {projects[current].technologies.map((tech, i) => {
                     const icon = techIcons[tech] || null;
                     return (
-                      <span className="portfolio-tech-icon" key={i}>
+                      <span className="portfolio-tech-icon" key={i} title={tech}>
                         {icon && <img src={icon} alt={tech} />}
+                        <span className="tech-tooltip">{tech}</span>
                       </span>
                     );
                   })}
@@ -159,8 +160,9 @@ export default function Portfolio() {
                     {project.technologies.map((tech, i) => {
                       const icon = techIcons[tech] || null;
                       return (
-                        <span className="portfolio-tech-icon" key={i}>
+                        <span className="portfolio-tech-icon" key={i} title={tech}>
                           {icon && <img src={icon} alt={tech} />}
+                          <span className="tech-tooltip">{tech}</span>
                         </span>
                       );
                     })}
