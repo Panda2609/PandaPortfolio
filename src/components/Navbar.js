@@ -30,7 +30,7 @@ export default function Navbar({ activeSection }) {
         <div className="navbar-left">
           <a href="#home" className="logo-link" onClick={handleMenuClose}>
             <span>Pandev</span>
-            <img src="https://storage.googleapis.com/bucket-panda-portfolio/resources/page-elements/logotype.png" alt="Logo" className="logo" />
+            <img src="https://storage.googleapis.com/bucket-portfolio-web/resources/page-elements/logotype.png" alt="Logo" className="logo" />
           </a>
         </div>
         {/* Menú normal para desktop */}
