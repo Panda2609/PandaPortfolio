@@ -9,7 +9,7 @@ const projects = [
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/simple_login.png',
     name: 'Simple Login',
     description: 'Aplicación end to end de autenticación simple con registro, inicio de sesión, encriptado de contraseña y bases de datos.',
-    technologies: ['Angular', 'Typescript', 'Tailwind', 'HTML', 'PostgreSQL', 'Node.js', 'Express.js'],
+    technologies: ['Angular', 'Typescript', 'Tailwind', 'PostgreSQL', 'Node.js', 'Express.js'],
     demoUrl: 'https://panda2609.github.io/simple-auth-login/',
     repoUrl: 'https://github.com/Panda2609/simple-auth-login',
     status: true,
@@ -17,7 +17,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/rh_core.png',
     name: 'RH Core',
-    description: 'Sistema para la administración del personal y sus recursos.',
+    description: 'Prototipo web para la administración del personal, asistencia, remuneraciones, capacitación y sus roles.',
     technologies: ['React', 'CSS', 'JavaScript', 'HTML'],
     demoUrl: 'https://panda2609.github.io/rh-core-web/',
     repoUrl: 'https://github.com/Panda2609/rh-core-web',
@@ -30,7 +30,7 @@ const projects = [
     technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js','MongoDB', 'Google Cloud'],
     demoUrl: 'https://panda2609.github.io/pichanga/',
     repoUrl: 'https://github.com/Panda2609/pichanga',
-    status: true,
+    status: false,
   },
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/pyme.png',
@@ -85,6 +85,9 @@ const techIcons = {
   'MongoDB': 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/MongoDB.svg',
   'Git': 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Git.svg',
   'Google Cloud': 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Google Cloud.svg',
+  'Express.js': 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Express.svg',
+  'Tailwind':'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Tailwind.svg',
+  'Typescript':'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/TypeScript.svg',
 };
 
 export default function Portfolio() {
