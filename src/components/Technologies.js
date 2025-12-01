@@ -9,10 +9,12 @@ const technologiesTable = [
 		{ name: 'TypeScript', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/TypeScript.svg' },
 		{ name: 'HTML', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/HTML5.svg' },
 		{ name: 'CSS', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/CSS3.svg' },
+		{ name: 'Tailwind', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Tailwind.svg' },
 	],
 	[
 		'Backend',
 		{ name: 'Node.js', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Node.js.svg' },
+		{ name: 'Express.js', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Express.svg' },
 		{ name: 'Java', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Java.svg' },
 		{ name: 'Python', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Python.svg' },
 	],
@@ -32,7 +34,7 @@ const technologiesTable = [
 		{ name: 'Git', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Git.svg' },
 		{ name: 'Metodología Scrum' },
 		{ name: 'PXP' },
-		{ name: 'Canvan' },
+		{ name: 'Kanban' },
 	],
 ];
 
