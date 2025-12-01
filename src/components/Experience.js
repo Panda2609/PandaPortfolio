@@ -7,10 +7,11 @@ const experiences = [
         title: 'Desarrollos de proyectos personales',
         subtitle: 'Proyectos propios',
         details: [
+            'Desarrolla prototipo de aplicación de autenticación simple con registro e inicio de sesión.',
             'Desarrolla Prototipo de sistema de administración de personas.',
             'Diseña y genera Prototipo para arriendo de canchas deportivas end to end.',
+            'Desarrolla prototipo para administración de una pyme.',
             'Crea Herramienta generadora de contraseñas seguras.',
-            'Scripts de web scraping para extracción de datos desde sitios web.'
         ]
     },
     {

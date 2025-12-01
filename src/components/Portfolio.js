@@ -34,8 +34,8 @@ const projects = [
   },
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/pyme.png',
-    name: 'Crud Pymes',
-    description: 'Sistema de gestión para pequeñas y medianas empresas con operaciones CRUD completas.',
+    name: 'MyPyme',
+    description: 'Prototipo de gestión para pequeñas y medianas empresas con operaciones CRUD completas.',
     technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/my-pyme/',
     repoUrl: 'https://github.com/Panda2609/my-pyme',

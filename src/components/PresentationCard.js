@@ -6,7 +6,7 @@ import { FaRegCommentDots } from 'react-icons/fa'; // Font Awesome
 export default function PresentationCard() {
     const handleDownloadCV = () => {
         const link = document.createElement('a');
-        link.href = "https://storage.googleapis.com/bucket-portfolio-web/cv/ATS_CV_BANDA_CRISTIAN.pdf";
+        link.href = "https://storage.googleapis.com/bucket-portfolio-web/cv/ATS_CV_BANDA_CRISTIAN_DEV.pdf";
         link.download = 'CV-Banda_Cristian.pdf';
         document.body.appendChild(link);
         link.click();
