@@ -6,6 +6,15 @@ import { FiExternalLink } from 'react-icons/fi';
 
 const projects = [
   {
+    image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/simple_login.png',
+    name: 'Simple Login',
+    description: 'Aplicación end to end de autenticación simple con registro, inicio de sesión, encriptado de contraseña y bases de datos.',
+    technologies: ['Angular', 'Typescript', 'Tailwind', 'HTML', 'PostgreSQL', 'Node.js', 'Express.js'],
+    demoUrl: 'https://panda2609.github.io/simple-auth-login/',
+    repoUrl: 'https://github.com/Panda2609/simple-auth-login',
+    status: true,
+  },
+  {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/rh_core.png',
     name: 'RH Core',
     description: 'Sistema para la administración del personal y sus recursos.',
@@ -18,7 +27,7 @@ const projects = [
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/pichanga.png',
     name: 'Pichanga App',
     description: 'Aplicación end to end para arrendar canchas, gestionar reservas y simular pagos en línea.',
-    technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'Google Cloud'],
+    technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js','MongoDB', 'Google Cloud'],
     demoUrl: 'https://panda2609.github.io/pichanga/',
     repoUrl: 'https://github.com/Panda2609/pichanga',
     status: true,
