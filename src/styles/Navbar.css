@@ -4,7 +4,8 @@
   position: sticky;
   top: 1em;
   background-color: transparent;
-  overflow: hidden;;
+  overflow: hidden;
+  z-index: 100;
   /* padding: 1em; */
 }
 .navbar-center li a,
