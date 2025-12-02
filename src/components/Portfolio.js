@@ -9,7 +9,7 @@ const projects = [
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/simple_login.png',
     name: 'Simple Login',
     description: 'Aplicación end to end de autenticación simple con registro, inicio de sesión, encriptado de contraseña y bases de datos.',
-    technologies: ['Angular', 'Typescript', 'Tailwind', 'PostgreSQL', 'Node.js', 'Express.js'],
+    technologies: ['Angular', 'Typescript', 'Tailwind', 'PostgreSQL', 'Node.js', 'Express.js', 'Google Cloud'],
     demoUrl: 'https://panda2609.github.io/simple-auth-login/',
     repoUrl: 'https://github.com/Panda2609/simple-auth-login',
     status: true,
