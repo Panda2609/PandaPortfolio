@@ -1,10 +1,37 @@
-@media (max-width: 700px) {
-  .contact-container {
-    background-color: var(--page-color);
-    min-height: 100vh;
-    border-radius: var(--rounded-corners);
-    padding: 2rem 0rem;
+/* Estilos para el formulario de contacto */
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  background: var(--page-color);
+  padding: 2rem 0rem;
+}
+
+/* ========== TABLET GRANDE (901px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 901px) {
+  .contact-form-container {
+    max-width: 600px;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
   }
+  .contact-form label {
+    font-size: 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .send-btn {
+    padding: 0.6em 1.8em;
+    font-size: 1rem;
+  }
+}
+
+/* ========== TABLET PEQUEÑA (769px - 900px) ========== */
+@media (max-width: 900px) {
   .contact-form-container {
     padding: 1em 2vw !important;
     max-width: 98vw;
@@ -67,18 +94,66 @@
     font-weight: 600 !important;
   }
 }
-/* Estilos para el formulario de contacto */
 
-.contact-container{
-  display: flex;
-  flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
-  min-height: 100vh;
-  height: auto;
-  background: var(--page-color);
-  padding: 2rem 0rem;
+/* ========== MÓVIL (< 768px) ========== */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 1em 2vw !important;
+    max-width: 98vw;
+    margin: 0em auto !important;
+    box-shadow: none;
+    border-radius: var(--rounded-corners);
+    width: 95vw;
+    margin: 0 auto 1em auto;
+    box-sizing: border-box;
+  }
+  .contact-form {
+    gap: 0.9em;
+    width: 100%;
+  }
+  .contact-form label {
+    font-size: 0.95em;
+    margin-bottom: 0.2em;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95em;
+    padding: 0.6em 0.8em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-form textarea {
+    min-height: 5em;
+    max-width: 100%;
+  }
+  .send-btn {
+    padding: 0.6em 1.8em;
+    font-size: 0.95em;
+    margin-top: 0.8em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .copy-email-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8em;
+    margin-top: 1.5em;
+    padding: 0.6em 0.8em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .copy-email-container span {
+    font-size: 0.95em;
+    word-break: break-all;
+  }
+  .copy-btn {
+    width: 100%;
+    font-size: 0.95em;
+    padding: 0.45em 0.9em;
+    box-sizing: border-box;
+  }
 }
+
 .contact-form-container {
   background: var(--card-color);
   border-radius: var(--rounded-corners);

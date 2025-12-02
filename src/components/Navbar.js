@@ -36,7 +36,6 @@ export default function Navbar({ activeSection }) {
         {/* Menú normal para desktop */}
         <div className="navbar-center">
           <ul>
-            <li><a href="#home" className={activeSection === "home" ? "active" : ""} onClick={handleMenuClose}>Home</a></li>
             <li><a href="#aboutme" className={activeSection === "aboutme" ? "active" : ""} onClick={handleMenuClose}>Sobre mí</a></li>
             <li><a href="#experience" className={activeSection === "experience" ? "active" : ""} onClick={handleMenuClose}>Experiencia</a></li>
             <li><a href="#portfolio" className={activeSection === "portfolio" ? "active" : ""} onClick={handleMenuClose}>Proyectos</a></li>
@@ -69,7 +68,6 @@ export default function Navbar({ activeSection }) {
       {/* Menú móvil desplegable */}
       <div className={`navbar-mobile-menu${menuOpen ? ' open' : ''}`}>
         <ul>
-          <li><a href="#home" className={activeSection === "home" ? "active" : ""} onClick={handleMenuClose}>Home</a></li>
           <li><a href="#aboutme" className={activeSection === "aboutme" ? "active" : ""} onClick={handleMenuClose}>Sobre mí</a></li>
           <li><a href="#experience" className={activeSection === "experience" ? "active" : ""} onClick={handleMenuClose}>Experiencia</a></li>
           <li><a href="#portfolio" className={activeSection === "portfolio" ? "active" : ""} onClick={handleMenuClose}>Proyectos</a></li>

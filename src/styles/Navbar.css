@@ -89,7 +89,7 @@
 
 @font-face {
   font-family: "MairyExtrabold";
-  src: url("C:\GithubProyects\portfolio_banda_cristian\portfolio\src\Fonts\mairy-cufonfonts\Mairy Book.otf");
+  src: url("../Fonts/mairy-cufonfonts/Mairy Extrabold.otf");
 }
 
 .social-logo-navbar {
@@ -144,6 +144,25 @@
 }
 
 /* --- Responsive styles for mobile navbar --- */
+
+/* ========== TABLET GRANDE (901px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 901px) {
+  .navbar-content {
+    max-width: 90%;
+  }
+  .navbar-center li a,
+  .navbar-right li a {
+    font-size: 120%;
+    padding: 1rem 0.8rem;
+  }
+  .contact-btn {
+    padding: 0.6em 1.5em;
+    font-size: 1em;
+    margin-left: 1em;
+  }
+}
+
+/* ========== TABLET PEQUEÑA (769px - 900px) ========== */
 @media (max-width: 900px) {
   .navbar-content {
     max-width: 100%;
@@ -166,7 +185,32 @@
   .contact-btn{
     margin-left: 0em;
   }
-  
+}
+
+/* ========== MÓVIL (< 768px) ========== */
+@media (max-width: 768px) {
+  .navbar-content {
+    max-width: 100%;
+    padding: 0.5em 1em;
+  }
+  .navbar-center,
+  .navbar-right {
+    display: none !important;
+  }
+  .navbar-burger {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 1002 !important;
+  }
+  .contact-btn{
+    margin-left: 0em;
+    font-size: 0.9em;
+  }
 }
 
 .navbar-burger {

@@ -18,6 +18,52 @@
 .project-badge.in-progress {
   background: #ff9800;
 }
+
+/* ========== TABLET GRANDE (901px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 901px) {
+  .portfolio-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .portfolio-card {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+  }
+  .portfolio-image {
+    height: 160px;
+  }
+  .portfolio-title {
+    font-size: 1.5em;
+  }
+  .portfolio-description {
+    font-size: 1.1em;
+  }
+}
+
+/* ========== TABLET PEQUEÑA (769px - 900px) ========== */
+@media (max-width: 900px) {
+  .portfolio-cards {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+  }
+  .portfolio-card {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+  }
+  .portfolio-image {
+    height: 140px;
+  }
+  .portfolio-title {
+    font-size: 1.3em;
+  }
+  .portfolio-description {
+    font-size: 1em;
+  }
+}
+
+/* ========== MÓVIL (< 768px) ========== */
 @media (max-width: 700px) {
   .portfolio-cards {
     display: flex !important;

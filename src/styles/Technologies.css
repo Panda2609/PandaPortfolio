@@ -117,6 +117,58 @@
   padding-right: .5em;
 }
 
+/* ========== TABLET GRANDE (901px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 901px) {
+  .technologies-table {
+    gap: 0.8rem;
+  }
+  .table-row {
+    padding: 0.8rem 1rem;
+  }
+  .table-header {
+    font-size: 1rem;
+    margin-bottom: 0.2em;
+  }
+  .table-cells {
+    gap: 0.8rem !important;
+    flex-wrap: wrap;
+  }
+  .technology-logo {
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+  }
+  .table-cell span {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========== TABLET PEQUEÑA (769px - 900px) ========== */
+@media (max-width: 900px) {
+  .technologies-table {
+    gap: 0.8rem;
+  }
+  .table-row {
+    padding: 0.8rem 1rem;
+  }
+  .table-header {
+    font-size: 0.95rem;
+  }
+  .table-cells {
+    gap: 0.6rem !important;
+    flex-wrap: wrap;
+  }
+  .technology-logo {
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+  }
+  .table-cell span {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========== MÓVIL (< 768px) ========== */
 @media (max-width: 700px) {
   .technologies-table {
     gap: 1em;

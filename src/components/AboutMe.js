@@ -12,13 +12,13 @@ const aboutMeBlocks = [
         key: 'education',
         img: 'https://storage.googleapis.com/bucket-portfolio-web/resources/page-elements/PandaEducation.png',
         title: 'Formación',
-        text: 'Soy Ingeniero Civil en Computación de la Universidad de Talca, mi Minor en Nuevas tecnologías Computacionales me otorga la capacidad de aprender rápidamente nuevas tecnologías y adaptarme a diferentes entornos de trabajo. Además, cuento con un Diplomado en Diseño y Desarrollo Web que fortaleció mis habilidades en frontend y backend. Actualmente, me sigo capacitando en tecnologías como React y Nextjs.'
+        text: 'Ingeniero Civil en Computación de la Universidad de Talca, con especialización en Nuevas Tendencias Computacionales y Diplomado en Diseño y Desarrollo Web. Actualmente, me sigo capacitando en tecnologías para crear un perfil Full Stack.'
     },
     {
         key: 'hobbies',
         img: 'https://storage.googleapis.com/bucket-portfolio-web/resources/page-elements/PandaGamer.png',
         title: 'Hobbies',
-        text: 'Disfruto mucho de mi tiempo libre jugando videojuegos, programando nuevos proyectos, jugando futbol con amigos y compartiendo buenas conversaciones en linea. Estas actividades me permiten relajarme, aprender y mantenerme conectado con quienes me rodean.'
+        text: 'Disfruto mucho de mi tiempo libre jugando videojuegos, programando nuevos proyectos, jugando futbol con amigos y compartiendo buenas conversaciones en linea. Dichas actividades me permiten relajarme, aprender y mantenerme conectado.'
     }
 ];
 
@@ -42,15 +42,15 @@ export default function AboutMe() {
 
     return (
         <>
-            <div className="aboutme-container2">
-                <h2 >Sobre mí</h2>
-                <div className="aboutme-container">
+            <div className="aboutme-container">
+                <h2 className='title-aboutme'>Habilidades</h2>
+                <div className ='aboutme-content'>
                     <div className="aboutme-items">
                         {aboutMeBlocks.map(block => (
                             <div className="aboutme-item chat" key={block.key}>
                                 <img src={block.img} alt={block.title} className="aboutme-img" />
                                 <div className="aboutme-text">
-                                    <div className={block.key === 'education' ? 'chat-question-formation' : 'chat-question'}>{block.title}</div>
+                                    <div className="chat-question">{block.title}</div>
                                     {isMobile ? (
                                         <button className="aboutme-modal-btn" onClick={() => openModal(block)}>
                                             Ver más
@@ -94,7 +94,6 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
-            {/* Modal */}
             {modalOpen && (
                 <div className="aboutme-modal-overlay" onClick={closeModal}>
                     <div className="aboutme-modal" onClick={e => e.stopPropagation()}>

@@ -88,12 +88,12 @@
     display: grid;
     grid-template-columns: minmax(110px, 160px) 20px 1fr; /* 3 columnas */
     grid-template-rows: auto auto; /* 2 filas: título y experiencia */
-    gap: 0.3rem 1rem; /* Espacio entre columnas y filas */
+    gap: 0.1rem 1rem; /* Espacio entre columnas y filas */
     color: var(--text-color);
     background-color: var(--card-color);
     border-radius: var(--rounded-corners);
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    padding: 0.8rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
     position: relative;
     margin-bottom: .5rem;
 }
@@ -177,6 +177,25 @@
 
 /* Diseño responsivo */
 
+/* ========== TABLET GRANDE (901px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 901px) {
+    .experience-grid {
+        grid-template-columns: minmax(90px, 140px) 15px 1fr;
+        gap: 0.3rem 0.8rem;
+        padding: 0.7rem 0.8rem 0.8rem 0.8rem;
+    }
+    .title {
+        font-size: 1.1rem;
+    }
+    .details h3 {
+        font-size: 120%;
+    }
+    .details h5 {
+        font-size: 100%;
+    }
+}
+
+/* ========== TABLET PEQUEÑA (769px - 900px) ========== */
 @media (max-width: 900px) {
     .experience-grid {
         display: flex;

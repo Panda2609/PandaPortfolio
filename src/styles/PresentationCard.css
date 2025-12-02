@@ -1,3 +1,38 @@
+/* ========== TABLET GRANDE (901px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 901px) {
+    .presentation-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        /* gap: 2rem; */
+    }
+    .left-content {
+        width: 55%;
+        margin-left: 2rem;
+    }
+    .right-content {
+        width: 45%;
+        margin-right: 2rem;
+    }
+    .panda-container {
+        height: 250px;
+    }
+    .panda-scale {
+        transform: scale(1.6);
+    }
+    .name {
+        font-size: 2.5em;
+    }
+    .role {
+        font-size: 2.2em;
+    }
+    .description {
+        font-size: 1.4em;
+    }
+}
+
+/* ========== TABLET PEQUEÑA (769px - 900px) ========== */
 @media (max-width: 900px) {
     body.menu-open .panda-container {
         opacity: 0 !important;
@@ -10,10 +45,12 @@
     .presentation-card{
         display: flex;
         min-height: 0vh !important;
+        /* padding: 0em 0em !important; */
     }
     .panda-container {
         scale: 0.45;
-        margin: 0;
+        top: 3rem;
+        
     }
     .right-content{
         height: auto;
@@ -21,7 +58,7 @@
     .presentation-card {
         flex-direction: column-reverse;
         min-height: unset;
-        padding: 0em 0.5em;
+        /* padding: 0em 0.5em; */
     }
     .left-content, .right-content {
         width: 100% !important;
@@ -57,6 +94,9 @@
     .vertical-divider {
         display: none;
     }
+    .middle-separator-space {
+        display: none;
+    }
     .btn{
         text-decoration: none;
         color: var(--hover-text-color) !important;
@@ -74,15 +114,21 @@
     background-color: var(--page-color);
     border-radius: var(--rounded-corners);
     min-height: 100vh;
+    gap: 3rem;
 }
 
 .left-content {
     width: 50%; /* 40% del ancho total */
-    margin-left: 7rem;
+    flex-shrink: 0;
+}
+
+.middle-separator-space {
+    width: 2rem;
+    background: none;
 }
 
 .right-content {
-    margin-right: 7rem;
+    /* margin-right: 7rem; */
     width: 50%; /* 60% del ancho total */
     /* max-width: 45%; */
     display: flex;
@@ -333,10 +379,10 @@
 /* Figura amorfa detrás del panda */
 .panda-bg-shape {
     position: absolute;
-    scale: 3.7; /* Escala para que sea más grande que el panda */
-    rotate: 30deg; /* Rotación para darle un efecto dinámico */
+    scale: 3.4; /* Escala para que sea más grande que el panda */
+    rotate: 40deg; /* Rotación para darle un efecto dinámico */
     top: 50px;
-    /* left: 40px; Ajusta la posición para que esté detrás del panda */
+    /* left: 30px; */
     width: 100%;
     height: 130px;
     background: radial-gradient(ellipse at 60% 40%, var(--btn-color) 80%, var(--btn-color) 100%);
@@ -344,4 +390,14 @@
     z-index: 0;
     opacity: 0.7;
     transform: rotate(-200deg) scale(1, 1.2);
+}
+
+/* Panda Illustration Styles */
+.panda-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    margin-top: 30px;
+    position: relative; /* Para posicionar la figura amorfa */
 }

@@ -16,12 +16,12 @@ li {
 
 @font-face {
   font-family: "MairyExtrabold";
-  src: url("C:\GithubProyects\portfolio_banda_cristian\portfolio\src\Fonts\mairy-cufonfonts\Mairy Extrabold.otf");
+  src: url("./Fonts/mairy-cufonfonts/Mairy Extrabold.otf");
 }
 
 @font-face {
   font-family: "MairyBook";
-  src: url("C:\GithubProyects\portfolio_banda_cristian\portfolio\src\Fonts\mairy-cufonfonts\Mairy Book.otf");
+  src: url("./Fonts/mairy-cufonfonts/Mairy Book.otf");
 }
 
 button{
@@ -47,6 +47,7 @@ h5{
 /* Scroll Snap para navegación por secciones */
 .main-container {
   width: 80vw;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -56,16 +57,11 @@ html, body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-html, body {
-  height: 100%;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
 
 .section {
   scroll-snap-align: start;
   height: 100vh;
-  scroll-margin-top: 10vh; /* Ajusta este valor a la altura real de tu navbar */
+  scroll-margin-top: 10vh;
   padding: 0rem 0rem;
   background: transparent;
   border: none;
@@ -74,10 +70,17 @@ html, body {
   margin: 0;
 }
 
+/* ========== TABLET GRANDE (901px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 901px) {
+  .main-container {
+    width: 85vw;
+  }
+}
+
+/* ========== TABLET PEQUEÑA (769px - 900px) ========== */
 @media (max-width: 900px) {
   .main-container {
-    width: 98vw;
-    margin: 0 auto;
+    width: 90vw;
   }
   h2, h3 {
     font-size: 2rem;
@@ -97,10 +100,22 @@ html, body {
     padding: 0.5rem 1.2rem;
   }
   .section {
-    scroll-margin-top: 10vh; /* Ajusta este valor al alto real del navbar móvil */
+    scroll-margin-top: 10vh;
     padding-left: 0;
     padding-right: 0;
   }
- 
+}
+
+/* ========== MÓVIL (< 768px) ========== */
+@media (max-width: 768px) {
+  .main-container {
+    width: 95vw;
+  }
+  h2, h3 {
+    font-size: 1.8rem;
+  }
+  p, li, h5, span {
+    font-size: 0.95rem;
+  }
 }
 

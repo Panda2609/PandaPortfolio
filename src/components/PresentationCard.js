@@ -34,6 +34,8 @@ export default function PresentationCard() {
                     
                 </div>
             </div>
+            <div className='middle-separator-space'>
+            </div>
             <div className="right-content">
                 <div className="panda-container">
                     <div className="panda-bg-shape"></div>
