@@ -2,39 +2,55 @@ import  '../styles/Technologies.css';
 
 const technologiesTable = [
 	[
-		'Frontend',
-		{ name: 'React', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/React.svg' },
-		{ name: 'Angular', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Angular.svg' },
+		'Lenguajes',
 		{ name: 'JavaScript', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/JavaScript.svg' },
 		{ name: 'TypeScript', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/TypeScript.svg' },
+		{ name: 'Python', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Python.svg' },
+		{ name: 'Java', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Java.svg' },
 		{ name: 'HTML', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/HTML5.svg' },
 		{ name: 'CSS', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/CSS3.svg' },
+	],
+	[
+		'Frameworks y Librerías',
+		{ name: 'React', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/React.svg' },
+		{ name: 'Angular', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Angular.svg' },
+		{ name: 'Node.js', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Node.js.svg' },
+		{ name: 'Express.js', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Express.svg' },
+		{ name: 'Bootstrap', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Bootstrap.svg' },
 		{ name: 'Tailwind', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Tailwind.svg' },
 	],
 	[
-		'Backend',
-		{ name: 'Node.js', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Node.js.svg' },
-		{ name: 'Express.js', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Express.svg' },
-		{ name: 'Java', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Java.svg' },
-		{ name: 'Python', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Python.svg' },
-	],
-	[
-		'Data Base',
+		'Bases de Datos',
 		{ name: 'PostgreSQL', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/PostgresSQL.svg' },
 		{ name: 'MongoDB', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/MongoDB.svg' },
 		{ name: 'MySQL', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Mysql.svg' },
-
+		{ name: 'Firebase', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Firebase.svg' },
 	],
 	[
-		'Cloud',
-		{ name: 'Google Cloud', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Google Cloud.svg' },
+		'DevOps',
+		{ name: 'Docker', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Docker.svg' },
+		{ name: 'Google Cloud Platform', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Google Cloud.svg' },
+	],
+	[
+		'Herramientas y Testing',
+		{ name: 'Git', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Git.svg' },
+		{ name: 'Postman', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Postman.svg' },
+		{ name: 'VS Code', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/VSCode.svg' },
+		{ name: 'Jasmine', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Jasmine.svg' },
+		{ name: 'Karma', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Karma.svg' },
+	],
+	[
+		'Metodologías Ágiles',
+		{ name: 'Scrum'},
+		{ name: 'Extreme Programming'},
+		{ name: 'Kanban' },
 	],
 	[
 		'Otros',
-		{ name: 'Git', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Git.svg' },
-		{ name: 'Metodología Scrum' },
-		{ name: 'PXP' },
-		{ name: 'Kanban' },
+		{ name: 'Google Workspace', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Google.svg' },
+		{ name: 'Microsoft 365', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Microsoft.svg' },
+		{ name: 'Canva', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Canva.svg'},
+		{ name: 'Inglés B1.2' },
 	],
 ];
 
@@ -45,11 +61,7 @@ export default function Technologies() {
 			<h2 className='title-habilities'>Habilidades</h2>
 			<div className='description-container'>
 				<p>
-					A lo largo de mi carrera, he adquirido experiencia en una variedad de tecnologías
-					y herramientas que me permiten desarrollar aplicaciones web completas y eficientes.
-					Estas son las tecnologías con las que he trabajado en mis proyectos. 
-					Si bien no soy un experto en todas ellas, tengo un conocimiento sólido y 
-					he aplicado estas herramientas en diversas aplicaciones.
+					A lo largo de mi carrera adquirí experiencia en una variedad de tecnologías y herramientas que me permiten desarrollar aplicaciones web completas. Si bien no soy un experto en todas ellas, tengo un conocimiento sólido y he aplicado estas herramientas en diversas aplicaciones. Las tecnologías que manejo actualmente son:
 				</p>
 			</div>
 			<div className='technologies-table'>

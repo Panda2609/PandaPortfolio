@@ -1,5 +1,7 @@
 h2{
   font-family: MairyExtrabold;
+  margin: 0.2em 0em;
+  text-align: start;
 }
 
 h3{
@@ -40,14 +42,10 @@ h5{
   font-family: MairyBook;
 }
 
-.element {
-  padding: 1.2%;
-}
-
 /* Scroll Snap para navegación por secciones */
 .main-container {
   width: 80vw;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
 }
 

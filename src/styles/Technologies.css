@@ -14,11 +14,11 @@
 
 .description-container {
   /* margin: 1rem; */
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   text-align: justify;
   background-color: var(--text-color);
   border-radius: var(--rounded-corners);
-  padding: .5em 1em;
+  padding: .2rem 1rem;
 }
 
 .description-container p {
@@ -38,24 +38,25 @@
   padding: 0.5em 2em;
   box-shadow: 0 2px 8px rgba(26,35,126,0.04);
   margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
 }
 
 .table-header {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-color);
-  margin-bottom: 0.3em;
+  margin-bottom: 0;
   text-align: left;
   letter-spacing: 0.5px;
-}
-
-.table-row {
-  display: flex;
-  flex-direction: column;
+  min-width: 150px;
+  flex-shrink: 0;
 }
 
 .table-row .table-header {
-  align-self: flex-start;
+  align-self: center;
 }
 
 .table-row .table-cells {
@@ -63,8 +64,8 @@
   flex-wrap: wrap;
   gap: 1em;
   align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0;
+  flex: 1;
 }
 
 .table-cell {
@@ -74,7 +75,7 @@
   /* min-width: 120px; */
   margin-bottom: 0;
   gap: 0.3em;
-  padding: 0.4em;
+  padding: 0.2em;
   border-radius: var(--rounded-corners);
   background-color: var(--text-color);
 }
@@ -114,7 +115,7 @@
   color: var(--hover-text-color);
   text-align: left;
   font-weight: 500;
-  padding-right: .5em;
+  padding: 0.5em;
 }
 
 /* ========== TABLET GRANDE (901px - 1024px) ========== */
