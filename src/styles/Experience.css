@@ -131,7 +131,7 @@
     align-items: center;
     overflow: hidden;
     text-overflow: ellipsis; /* opcional: si quieres que corte con "..." si se pasa */
-    margin-left: 5px;
+    /* margin-left: 5px; */
     border-radius: 10px;
 }
   

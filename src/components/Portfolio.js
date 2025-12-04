@@ -9,7 +9,7 @@ const projects = [
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/simple_login.png',
     name: 'Simple Login',
     description: 'Aplicación end to end de autenticación simple con registro, inicio de sesión, encriptado de contraseña y bases de datos.',
-    technologies: ['Angular', 'Typescript', 'Tailwind', 'PostgreSQL', 'Node.js', 'Express.js', 'Google Cloud'],
+    technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js','MongoDB'],
     demoUrl: 'https://panda2609.github.io/simple-auth-login/',
     repoUrl: 'https://github.com/Panda2609/simple-auth-login',
     status: true,
@@ -93,12 +93,32 @@ const techIcons = {
 export default function Portfolio() {
   const scrollRef = useRef(null);
   const [current, setCurrent] = useState(0);
+  const [showTechScrollBtns, setShowTechScrollBtns] = useState(false);
 
   // Detecta si es móvil
   const isMobile = window.innerWidth <= 700;
 
+  // Verifica si hay scroll en el contenedor de tecnologías
+  const checkTechScroll = () => {
+    const techContainer = document.querySelector('.portfolio-technologies');
+    if (techContainer) {
+      const hasScroll = techContainer.scrollWidth > techContainer.clientWidth;
+      setShowTechScrollBtns(hasScroll);
+    }
+  };
+
+  React.useEffect(() => {
+    checkTechScroll();
+    setTimeout(checkTechScroll, 100);
+    window.addEventListener('resize', checkTechScroll);
+    return () => window.removeEventListener('resize', checkTechScroll);
+  }, [current]);
+
+  // Detecta si es móvil
+  const isMobileValue = window.innerWidth <= 700;
+
   const scroll = (direction) => {
-    if (isMobile) {
+    if (isMobileValue) {
       if (direction === 'left') {
         setCurrent((prev) => (prev > 0 ? prev - 1 : prev));
       } else {
@@ -122,7 +142,7 @@ export default function Portfolio() {
       <h2>Proyectos</h2>
       <div className="scroll-container" style={{display:'flex', alignItems:'center', position:'relative'}}>
         <button className="scroll-btn left" onClick={() => scroll('left')} aria-label="Anterior">&#8592;</button>
-        {isMobile ? (
+        {isMobileValue ? (
           <div className="portfolio-cards" style={{width: '100%'}}>
             <div className="portfolio-card" key={current} style={{position:'relative'}}>
               <span className={`project-badge ${projects[current].status ? 'finished' : 'in-progress'}`}>{projects[current].status ? 'Terminado' : 'En proceso'}</span>
@@ -130,16 +150,29 @@ export default function Portfolio() {
                 <img src={projects[current].image} alt={projects[current].name} className="portfolio-image" />
                 <h3 className="portfolio-title">{projects[current].name}</h3>
                 <p className="portfolio-description">{projects[current].description}</p>
-                <div className="portfolio-technologies">
-                  {projects[current].technologies.map((tech, i) => {
-                    const icon = techIcons[tech] || null;
-                    return (
-                      <span className="portfolio-tech-icon" key={i} title={tech}>
-                        {icon && <img src={icon} alt={tech} />}
-                        <span className="tech-tooltip">{tech}</span>
-                      </span>
-                    );
-                  })}
+                <p className="portfolio-tech-label">Tecnologías ocupadas</p>
+                <div className="portfolio-tech-scroll-container">
+                  {showTechScrollBtns && <button className="portfolio-tech-scroll-btn left" onClick={() => {
+                    const techContainer = document.querySelector('.portfolio-technologies');
+                    if (techContainer) techContainer.scrollBy({ left: -100, behavior: 'smooth' });
+                  }}>&#8592;</button>}
+                  <div className="portfolio-technologies">
+                    {projects[current].technologies.map((tech, i) => {
+                      const icon = techIcons[tech] || null;
+                      return (
+                        <div key={i} className="portfolio-tech-item">
+                          <span className="portfolio-tech-icon" title={tech}>
+                            {icon && <img src={icon} alt={tech} />}
+                          </span>
+                          <span className="portfolio-tech-label-item">{tech}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  {showTechScrollBtns && <button className="portfolio-tech-scroll-btn right" onClick={() => {
+                    const techContainer = document.querySelector('.portfolio-technologies');
+                    if (techContainer) techContainer.scrollBy({ left: 100, behavior: 'smooth' });
+                  }}>&#8594;</button>}
                 </div>
                 <div className="portfolio-buttons">
                   {projects[current].demoUrl ? (
@@ -151,7 +184,7 @@ export default function Portfolio() {
                       <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
                     </button>
                   )}
-                  <span className="portfolio-divider"></span>
+                
                   <a href={projects[current].repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
                     <FaGithub style={{marginRight:'7px', verticalAlign:'middle'}} />Repositorio
                   </a>
@@ -168,16 +201,29 @@ export default function Portfolio() {
                   <img src={project.image} alt={project.name} className="portfolio-image" />
                   <h3 className="portfolio-title">{project.name}</h3>
                   <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
-                    {project.technologies.map((tech, i) => {
-                      const icon = techIcons[tech] || null;
-                      return (
-                        <span className="portfolio-tech-icon" key={i} title={tech}>
-                          {icon && <img src={icon} alt={tech} />}
-                          <span className="tech-tooltip">{tech}</span>
-                        </span>
-                      );
-                    })}
+                  <p className="portfolio-tech-label">Tecnologías ocupadas</p>
+                  <div className="portfolio-tech-scroll-container">
+                    {showTechScrollBtns && <button className="portfolio-tech-scroll-btn left" onClick={() => {
+                      const techContainer = document.querySelector('.portfolio-technologies');
+                      if (techContainer) techContainer.scrollBy({ left: -100, behavior: 'smooth' });
+                    }}>&#8592;</button>}
+                    <div className="portfolio-technologies">
+                      {project.technologies.map((tech, i) => {
+                        const icon = techIcons[tech] || null;
+                        return (
+                          <div key={i} className="portfolio-tech-item">
+                            <span className="portfolio-tech-icon" title={tech}>
+                              {icon && <img src={icon} alt={tech} />}
+                            </span>
+                            <span className="portfolio-tech-label-item">{tech}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {showTechScrollBtns && <button className="portfolio-tech-scroll-btn right" onClick={() => {
+                      const techContainer = document.querySelector('.portfolio-technologies');
+                      if (techContainer) techContainer.scrollBy({ left: 100, behavior: 'smooth' });
+                    }}>&#8594;</button>}
                   </div>
                   <div className="portfolio-buttons">
                     {project.demoUrl ? (
