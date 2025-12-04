@@ -1,4 +1,5 @@
 import  '../styles/Technologies.css';
+import { useState, useEffect, useRef } from 'react';
 
 const technologiesTable = [
 	[

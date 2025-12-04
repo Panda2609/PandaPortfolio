@@ -3,7 +3,7 @@
   max-width: 100%;
   border-radius: var(--border-radius, 16px);
   padding: 2rem 0rem;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height));
   background: transparent;
   display: flex;
   flex-direction: column;

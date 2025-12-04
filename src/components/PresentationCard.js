@@ -24,8 +24,6 @@ export default function PresentationCard() {
                         <HiDownload style={{marginBottom: '4px'}} />
                         Descargar CV
                     </button>
-
-                    <span className="vertical-divider"></span>
                     
                     <button className='btn' onClick={() => window.location.hash = '#contact'}>
                         <FaRegCommentDots style={{marginRight: '8px'}} />
@@ -34,38 +32,37 @@ export default function PresentationCard() {
                     
                 </div>
             </div>
-            <div className='middle-separator-space'>
-            </div>
+            {/* <div className='middle-separator-space'></div> */}
             <div className="right-content">
+                <div className="panda-bg-shape"></div>
                 <div className="panda-container">
-                    <div className="panda-bg-shape"></div>
-                        <div className="panda panda-scale">
-                            <div className="ear left"></div>
-                            <div className="ear right"></div>
-                            <div className="head">
-                                <div className="eye left">
-                                    <div className="pupil"></div>
-                                </div>
-                                <div className="eye right">
-                                    <div className="pupil"></div>
-                                </div>
-                                <div className="nose"></div>
-                                <div className="mouth"></div>
+                    <div className="panda panda-scale">
+                        <div className="ear left"></div>
+                        <div className="ear right"></div>
+                        <div className="head">
+                            <div className="eye left">
+                                <div className="pupil"></div>
                             </div>
-                            <div className="body">
-                                <div className="arm left"></div>
-                                <div className="arm right"></div>
-                                <div className="leg left"></div>
-                                <div className="leg right"></div>
-                                <div className="bamboo">
-                                    <div className="bamboo-stem"></div>
-                                    <div className="bamboo-leaf leaf1"></div>
-                                    <div className="bamboo-leaf leaf2"></div>
-                                    <div className="bamboo-leaf leaf3"></div>
-                                </div>
+                            <div className="eye right">
+                                <div className="pupil"></div>
+                            </div>
+                            <div className="nose"></div>
+                            <div className="mouth"></div>
+                        </div>
+                        <div className="body">
+                            <div className="arm left"></div>
+                            <div className="arm right"></div>
+                            <div className="leg left"></div>
+                            <div className="leg right"></div>
+                            <div className="bamboo">
+                                <div className="bamboo-stem"></div>
+                                <div className="bamboo-leaf leaf1"></div>
+                                <div className="bamboo-leaf leaf2"></div>
+                                <div className="bamboo-leaf leaf3"></div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     );

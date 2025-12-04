@@ -3,7 +3,7 @@
 .contact-container{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height));
   height: auto;
   background: var(--page-color);
   padding: 2rem 0rem;

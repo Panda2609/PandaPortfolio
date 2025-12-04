@@ -65,7 +65,7 @@
     justify-content: flex-start;
     align-items: center;
     background-color: var(--page-color);
-    min-height: 100vh;
+    min-height: calc(100vh - var(--navbar-height));
     border-radius: var(--rounded-corners);
     padding: 2rem 0rem;
 }
