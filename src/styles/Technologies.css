@@ -146,100 +146,14 @@
 
 /* ========== TABLET PEQUEÑA (769px - 900px) ========== */
 @media (max-width: 900px) {
-  .technologies-table {
-    gap: 0.8rem;
-  }
-  .table-row {
-    padding: 0.8rem 1rem;
-  }
-  .table-header {
-    font-size: 0.95rem;
-  }
-  .table-cells {
-    gap: 0.6rem !important;
-    flex-wrap: wrap;
-  }
-  .technology-logo {
-    width: 22px;
-    height: 22px;
-    padding: 5px;
-  }
-  .table-cell span {
-    font-size: 0.9rem;
+  .habilities-container {
+    display: none;
   }
 }
 
 /* ========== MÓVIL (< 768px) ========== */
 @media (max-width: 700px) {
-  .technologies-table {
-    gap: 1em;
-  }
-  .table-row {
-    padding: 1em 0.5em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: .1em;
-    width: 95vw;
-    margin: 0 auto 0 auto;
-    box-sizing: border-box;
-  }
-  .table-header {
-    font-size: 1em;
-    margin-bottom: 0;
-    min-width: 90px;
-    text-align: left;
-    align-self: center !important;
-  }
-  .table-row .table-cells {
-    display: flex;
-    flex-direction: row;
-    gap: 0.2em;
-    flex-wrap: nowrap;
-    padding: 0;
-    /* margin-left: 0.2em; */
-  }
-  .table-cell {
-    width: auto;
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: none;
-    box-shadow: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .technology-logo {
-    width: 28px;
-    height: 28px;
-    padding: 4px;
-    margin: 0;
-  }
-  .tech-placeholder {
-    width: 28px;
-    height: 28px;
-    font-size: 0.95em;
-    margin: 0;
-  }
-  .table-cell span {
+  .habilities-container {
     display: none;
-  }
-
-  .description-container p{
-    font-size: 1.1em !important;
-    background-color: red;
-    padding: .5em .5em;
-    color: #4a5568;
-    margin: 0.5rem 0rem;
-    background: var(--text-color);
-    border-radius: var(--rounded-corners);
-    padding: 1em;
-    gap: .1em;
-    width: 95vw;
-    margin: 0 auto 0 auto;
-    box-sizing: border-box;
   }
 }

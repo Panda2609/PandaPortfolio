@@ -4,6 +4,7 @@ import { BrowserRouter} from "react-router-dom";
 
 // Import components 
 import Technologies from "./components/Technologies";
+import TechnologiesAccordion from "./components/TechnologiesAccordion";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import AboutMe from "./components/AboutMe";
@@ -60,6 +61,7 @@ function App() {
         </section>
         <section className="section" id="technologies">
           <Technologies />
+          <TechnologiesAccordion />
         </section>
         <section className="section" id="contact">
           <Contact />

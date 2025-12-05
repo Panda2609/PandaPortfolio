@@ -8,7 +8,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/simple_login.png',
     name: 'Simple Login',
-    description: 'Aplicación end to end de autenticación simple con registro, inicio de sesión, encriptado de contraseña y bases de datos.',
+    description: 'Aplicación end to end de autenticación simple con registro, inicio de sesión, encriptado de contraseña, bases de datos y protección de rutas.',
     technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js','MongoDB'],
     demoUrl: 'https://panda2609.github.io/simple-auth-login/',
     repoUrl: 'https://github.com/Panda2609/simple-auth-login',
@@ -17,7 +17,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/rh_core.png',
     name: 'RH Core',
-    description: 'Prototipo web para la administración del personal, asistencia, remuneraciones, capacitación y sus roles.',
+    description: 'Prototipo web de plataforma para Recursos Humanos, la cual considera la administración del personal, asistencia, remuneraciones, capacitación y sus roles.',
     technologies: ['React', 'CSS', 'JavaScript', 'HTML'],
     demoUrl: 'https://panda2609.github.io/rh-core-web/',
     repoUrl: 'https://github.com/Panda2609/rh-core-web',
@@ -26,7 +26,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/pichanga.png',
     name: 'Pichanga App',
-    description: 'Aplicación end to end para arrendar canchas, gestionar reservas y simular pagos en línea.',
+    description: 'Prototipo end to end para arrendar canchas de diversos deportes, gestionar reservas y simular pagos en línea.',
     technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js','MongoDB', 'Google Cloud'],
     demoUrl: 'https://panda2609.github.io/pichanga/',
     repoUrl: 'https://github.com/Panda2609/pichanga',
@@ -35,7 +35,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/pyme.png',
     name: 'MyPyme',
-    description: 'Prototipo de gestión para pequeñas y medianas empresas con operaciones CRUD completas.',
+    description: 'Prototipo de gestor web para pequeñas y medianas empresas con operaciones CRUD completas. Además incluye dashboard de estadísticas simuladas.',
     technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/my-pyme/',
     repoUrl: 'https://github.com/Panda2609/my-pyme',
@@ -45,7 +45,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/generador_contrasenias.png',
     name: 'Generador contraseñas',
-    description: 'Herramienta para crear contraseñas seguras y personalizables con diferentes criterios.',
+    description: 'Herramienta simple para crear contraseñas seguras y personalizables con diferentes criterios.',
     technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://panda2609.github.io/password-generator/',
     repoUrl: 'https://github.com/Panda2609/password-generator',
@@ -54,7 +54,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/scaper.png',
     name: 'Scraper autos Mercadolibre',
-    description: 'Script de web scraping para extraer información de vehículos desde sitios web.',
+    description: 'Pipeline ETL completo que extrae datos de vehículos desde Mercadolibre, transforma y limpia la información, y la persiste en CSV para análisis posteriores.',
     technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/scrapper_python_autos',
@@ -63,7 +63,7 @@ const projects = [
   {
     image: 'https://storage.googleapis.com/bucket-portfolio-web/resources/portfolioImages/monitor_scraping.png',
     name: 'Scraper monitores solotodo',
-    description: 'Script de web scraping en Python que recopila datos de monitores publicados en Solotodo.',
+    description: 'Proceso ETL automatizado que captura datos de monitores desde Solotodo, realiza transformaciones y validaciones, y almacena los datos en CSV para seguimiento de precios y tendencias.',
     technologies: ['Python'],
     demoUrl: '',
     repoUrl: 'https://github.com/Panda2609/solotodo-scraping',
@@ -235,7 +235,6 @@ export default function Portfolio() {
                         <FiExternalLink style={{marginRight:'7px', verticalAlign:'middle'}} />Demo
                       </button>
                     )}
-                    <span style={{display:'inline-block', width:'2px', height:'28px', background:'#ccc', margin:'0 10px', borderRadius:'2px', alignSelf:'center'}}></span>
                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
                       <FaGithub style={{marginRight:'7px', verticalAlign:'middle'}} />Repositorio
                     </a>

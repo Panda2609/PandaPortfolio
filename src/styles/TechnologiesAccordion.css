@@ -1,0 +1,231 @@
+/* Estilos del acordeón - solo visible en dispositivos pequeños */
+.accordion-container {
+	display: none;
+	max-width: 100%;
+	border-radius: var(--border-radius, 16px);
+	padding: 2rem 0rem;
+	min-height: calc(100vh - var(--navbar-height));
+	background: transparent;
+}
+
+.accordion-title {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--text-color);
+	/* margin-bottom: 1rem; */
+	text-align: start;
+}
+
+.description-container-accordion {
+	margin-bottom: 1rem;
+	text-align: justify;
+	background-color: var(--text-color);
+	border-radius: var(--rounded-corners);
+	/* padding: 0.2rem 0rem; */
+	width: 95vw;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+.description-container-accordion p {
+	font-size: 1.09rem;
+	color: var(--text-color-hover);
+	margin: 0.5rem 0rem;
+	padding: 0.5em;
+}
+
+.accordion-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	width: 95vw;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+.accordion-item {
+	border-radius: var(--rounded-corners);
+	background: var(--card-color);
+	box-shadow: 0 2px 8px rgba(26, 35, 126, 0.04);
+	overflow: hidden;
+}
+
+.accordion-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	background: var(--card-color);
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text-color);
+	transition: all 0.3s ease;
+	text-align: left;
+}
+
+.accordion-header:hover {
+	background: var(--btn-color);
+	color: var(--text-color-hover);
+}
+
+.accordion-header.active {
+	background: var(--btn-color);
+	color: var(--text-color-hover);
+}
+
+.accordion-title-text {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.accordion-icon {
+	font-size: 1.5rem;
+	font-weight: bold;
+	transition: transform 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 30px;
+}
+
+.accordion-header.active .accordion-icon {
+	transform: rotate(180deg);
+}
+
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
+	background: var(--card-color);
+}
+
+.accordion-content.open {
+	max-height: 500px;
+	overflow-y: auto;
+	padding: 1em;
+}
+
+.accordion-content-inner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.accordion-tech-item {
+	width: 50px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	border-radius: var(--rounded-corners);
+	background: transparent;
+	border: none;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.accordion-tech-item:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 12px rgba(26, 35, 126, 0.15);
+}
+
+.accordion-tech-logo {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+	filter: drop-shadow(0 2px 6px rgba(26, 35, 126, 0.10));
+	border-radius: 50%;
+	background: var(--text-color);
+	padding: 8px;
+	border: 2px solid var(--btn-color);
+}
+
+.accordion-tech-name {
+	font-size: 0.75rem;
+	color: var(--text-color);
+	text-align: center;
+	font-weight: 500;
+	max-width: 70px;
+	/* word-wrap: break-word; */
+	line-height: 1.2;
+}
+
+.accordion-tech-placeholder {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: var(--text-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #3949ab;
+	font-size: 0.75rem;
+	font-weight: bold;
+	border: 2px solid var(--btn-color);
+}
+
+/* ========== MOSTRAR EN TABLET PEQUEÑA (769px - 900px) ========== */
+@media (max-width: 900px) {
+	.accordion-container {
+		display: block;
+	}
+}
+
+/* ========== MOSTRAR EN MÓVIL (< 768px) ========== */
+@media (max-width: 700px) {
+	.accordion-container {
+		display: block;
+	}
+
+	.accordion-title {
+		font-size: 1.8rem;
+		/* margin-bottom: 0.8rem; */
+	}
+
+	.accordion-wrapper {
+		gap: 0.6rem;
+		width: 95vw;
+	}
+
+	.accordion-header {
+		padding: 0.8rem;
+		font-size: 0.95rem;
+	}
+
+	.accordion-content.open {
+		max-height: 400px;
+		/* padding: 0.8rem; */
+	}
+
+	.accordion-content-inner {
+		/* gap: 0.8rem; */
+	}
+
+	.accordion-tech-item {
+		width: 45px;
+		height: 45px;
+	}
+
+	.accordion-tech-logo {
+		width: 25px;
+		height: 25px;
+	}
+
+	.accordion-tech-placeholder {
+		width: 30px;
+		height: 30px;
+		font-size: 0.7rem;
+	}
+
+	.accordion-icon {
+		min-width: 25px;
+	}
+}

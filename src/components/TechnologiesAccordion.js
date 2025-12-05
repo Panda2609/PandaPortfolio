@@ -1,4 +1,5 @@
-import  '../styles/Technologies.css';
+import '../styles/TechnologiesAccordion.css';
+import { useState } from 'react';
 
 const technologiesTable = [
 	[
@@ -47,37 +48,55 @@ const technologiesTable = [
 	],
 ];
 
-export default function Technologies() {
-	
+export default function TechnologiesAccordion() {
+	const [openAccordion, setOpenAccordion] = useState(0);
+
+	const toggleAccordion = (index) => {
+		setOpenAccordion(openAccordion === index ? -1 : index);
+	};
+
 	return (
-        <div className='habilities-container'>
-			<h2 className='title-habilities'>Habilidades</h2>
-			<div className='description-container'>
+		<div className='accordion-container'>
+			<h2 className='accordion-title'>Habilidades</h2>
+			<div className='description-container-accordion'>
 				<p>
 					A lo largo de mi carrera adquirí experiencia en una variedad de tecnologías y herramientas que me permiten desarrollar aplicaciones web completas. Si bien no soy un experto en todas ellas, tengo un conocimiento sólido y he aplicado estas herramientas en diversas aplicaciones. Las tecnologías que manejo actualmente son:
 				</p>
 			</div>
-			<div className='technologies-table'>
+			<div className='accordion-wrapper'>
 				{technologiesTable.map((row, index) => (
-					<div className='table-row' key={index}>
-						<div className='table-header'>{row[0]}</div>
-						<div className='table-cells'>
-							{row.slice(1).map((tech, techIndex) => (
-								<div className='table-cell' key={techIndex}>
-									{tech && tech.logo ? (
-										<img src={tech.logo} alt={`${tech.name} logo`} className='technology-logo' />
-									) : (
-										<div className='tech-placeholder'>
-											{tech && tech.name ? tech.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0,3) : '?'}
-										</div>
-									)}
-									<span>{tech.name}</span>
-								</div>
-							))}
+					<div className='accordion-item' key={index}>
+						<button
+							className={`accordion-header ${openAccordion === index ? 'active' : ''}`}
+							onClick={() => toggleAccordion(index)}
+							aria-expanded={openAccordion === index}
+						>
+							<span className='accordion-title-text'>{row[0]}</span>
+							<span className='accordion-icon'>
+								{openAccordion === index ? '−' : '+'}
+							</span>
+						</button>
+						<div
+							className={`accordion-content ${openAccordion === index ? 'open' : ''}`}
+						>
+							<div className='accordion-content-inner'>
+								{row.slice(1).map((tech, techIndex) => (
+									<div className='accordion-tech-item' key={techIndex} title={tech.name}>
+										{tech && tech.logo ? (
+											<img src={tech.logo} alt={`${tech.name} logo`} className='accordion-tech-logo' />
+										) : (
+											<div className='accordion-tech-placeholder'>
+												{tech && tech.name ? tech.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 3) : '?'}
+											</div>
+										)}
+										<span className='accordion-tech-name'>{tech.name}</span>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				))}
 			</div>
-        </div>
+		</div>
 	);
 }
