@@ -151,7 +151,7 @@
 .title {
     grid-row: 1;
     grid-column: 3;
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--text-color);
 }
@@ -212,8 +212,19 @@
         align-items: start;
     }
 
-    .year, .dot, .line {
-        display: none !important;
+    .dot, .line {
+        display: none ;
+    }
+
+    .year {
+        display: block ;
+        grid-column: auto ;
+        grid-row: auto ;
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: var(--hover-color);
+        white-space: normal;
+        text-align: left;
     }
 
     .title, .details {
@@ -221,7 +232,8 @@
         color: var(--text-color);
     }
     .title{
-        font-size: 1.2rem !important;
+        font-size: 1.2rem;
+        font-weight: 800;
     }
 
     .details{
@@ -232,16 +244,17 @@
         background: var(--card-color);
         /* padding: 1em; */
         border-radius: var(--rounded-corners);
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
         padding: 1em 2vh;
         width: 95vw;
-        /* max-width: 600px; */
         margin: 0 auto 1em auto;
         box-sizing: border-box;
     }
     .experience-modal-btn{
         background-color: var(--btn-color);
-        color: var(--text-color-hover);
+        color: var(--text-color);
         border: none;
         border-radius: var(--rounded-corners);
         padding: 0.5em 1em;
@@ -252,13 +265,15 @@
         justify-content: flex-end;
         margin-left: auto;
         margin-right: 0;
+        
     }
     .experience-modal-btn:hover{
         background-color: var(--hover-color);
+        color: var(--hover-text-color);
     }
     .subtitle{
-        color: var(--text-color);
-        font-weight: 600;
+        color: var(--hover-color);
+        font-weight: 800;
     }
     .experience-modal-subtitle{
         font-size: 1.4rem !important;

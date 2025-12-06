@@ -4,7 +4,7 @@ import '../styles/Experience.css';
 const experiences = [
     {
         year: 'Jun 2024 — Hoy',
-        title: 'Desarrollos de proyectos personales',
+        title: 'Desarrollos proyectos personales',
         subtitle: 'Proyectos propios',
         details: [
             'Desarrollo de prototipos y aplicaciones web fullstack con React, Node.js y bases de datos.',
@@ -69,9 +69,9 @@ export default function Experience() {
                 {isMobile
                     ? experiences.map((exp, idx) => (
                         <div key={idx} className="experience-list-item">
-                            <div className="year">{exp.year}</div>
                             <div className="title">{exp.title}</div>
                             <div className="subtitle">{exp.subtitle}</div>
+                            <div className="year">{exp.year}</div>
                             <button className="experience-modal-btn" onClick={() => setActive(exp)}>
                                 Ver detalles
                             </button>

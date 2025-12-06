@@ -30,21 +30,21 @@ const technologiesTable = [
 	[
 		'DevOps',
 		{ name: 'Docker', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Docker.svg' },
-		{ name: 'Google Cloud Platform', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Google Cloud.svg' },
+		{ name: 'GCP', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Google Cloud.svg' },
 	],
 	[
 		'Herramientas y Testing',
 		{ name: 'Git', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Git.svg' },
 		{ name: 'Postman', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Postman.svg' },
-		{ name: 'VS Code', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/VSCode.svg' },
+		{ name: 'VSCode', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/VSCode.svg' },
 		{ name: 'Jasmine', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Jasmine.svg' },
 		{ name: 'Karma', logo: 'https://storage.googleapis.com/bucket-portfolio-web/resources/technologies-svg/Karma.svg' },
 	],
 	[
 		'Metodologías Ágiles',
 		{ name: 'Scrum'},
-		{ name: 'Extreme Programming'},
 		{ name: 'Kanban' },
+		{ name: 'XP'},
 	],
 ];
 

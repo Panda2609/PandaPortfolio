@@ -1,5 +1,4 @@
 import '../styles/AboutMe.css';
-import { useState } from 'react';
 
 const aboutMeBlocks = [
     {
@@ -23,47 +22,42 @@ const aboutMeBlocks = [
 ];
 
 export default function AboutMe() {
-    const [modalOpen, setModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState({});
-
-    // Detectar si es móvil
     const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 700px)').matches;
-
-    const openModal = (block) => {
-        setModalContent(block);
-        setModalOpen(true);
-        document.body.style.overflow = 'hidden';
-    };
-    const closeModal = () => {
-        setModalOpen(false);
-        setModalContent({});
-        document.body.style.overflow = '';
-    };
 
     return (
         <>
             <div className="aboutme-container">
                 <h2 className='title-aboutme'>Habilidades</h2>
                 <div className ='aboutme-content'>
-                    <div className="aboutme-items">
-                        {aboutMeBlocks.map(block => (
-                            <div className="aboutme-item chat" key={block.key}>
-                                <img src={block.img} alt={block.title} className="aboutme-img" />
-                                <div className="aboutme-text">
-                                    <div className="chat-question">{block.title}</div>
-                                    {isMobile ? (
-                                        <button className="aboutme-modal-btn" onClick={() => openModal(block)}>
-                                            Ver más
-                                        </button>
-                                    ) : (
+                    {isMobile ? (
+                        <div className="aboutme-cards-grid">
+                            {aboutMeBlocks.map(block => (
+                                <div className="aboutme-card" key={block.key}>
+                                    <div className="aboutme-card-header">
+                                        <img src={block.img} alt={block.title} className="aboutme-card-img" />
+                                        <h3 className="aboutme-card-title">{block.title}</h3>
+                                    </div>
+                                    <div className="aboutme-card-content">
+                                        <p>{block.text}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="aboutme-items">
+                            {aboutMeBlocks.map(block => (
+                                <div className="aboutme-item chat" key={block.key}>
+                                    <img src={block.img} alt={block.title} className="aboutme-img" />
+                                    <div className="aboutme-text">
+                                        <div className="chat-question">{block.title}</div>
                                         <div className="chat-answer">
                                             <p>{block.text}</p>
                                         </div>
-                                    )}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    )}
                     <div className="aboutme-graphic-bamboo">
                         {/* Bamboo stems */}
                         <div className="bamboo-stem stem1">
@@ -94,18 +88,6 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
-            {modalOpen && (
-                <div className="aboutme-modal-overlay" onClick={closeModal}>
-                    <div className="aboutme-modal" onClick={e => e.stopPropagation()}>
-                        <button className="aboutme-modal-close" onClick={closeModal}>&times;</button>
-                        <h3>{modalContent.title}</h3>
-                        <img src={modalContent.img} alt={modalContent.title} className="aboutme-modal-img" />
-                        <div className="aboutme-modal-text">
-                            <p>{modalContent.text}</p>
-                        </div>
-                    </div>
-                </div>
-            )}
         </>
     );
 }
